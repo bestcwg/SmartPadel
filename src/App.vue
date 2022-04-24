@@ -24,7 +24,7 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 </template>
 
 <style>
-/* @import './assets/base.css';*/
+/* @import './assets/base.css'; */
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ main {
 }
 
 nav {
-  border: solid 2px black;
+  border: solid 2px blue;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -62,7 +62,7 @@ nav ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 6%;
-  padding-right: 1px;
+  border: solid 2px blue;
 }
 
 </style>
