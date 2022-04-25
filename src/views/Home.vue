@@ -10,8 +10,8 @@ import Logo from '../components/icons/homepage/Logo.vue'
         <Logo class="logo"></Logo>
         <div class="home-match-buttoms">
             <ul>
-                <router-link to="/match"> <SearchForMatchButton /></router-link>
-                <router-link to="/createMatch"><CreateMatchButton /></router-link>
+                <SearchForMatchButton />
+                <CreateMatchButton />
             </ul>
         </div>
     </div>
@@ -27,6 +27,7 @@ import Logo from '../components/icons/homepage/Logo.vue'
     }
 
     .home-match-buttoms ul {
+        position: relative;
         display: grid;
         grid-auto-rows: 100px;
         grid-auto-flow: row;
