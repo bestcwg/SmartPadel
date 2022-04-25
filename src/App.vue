@@ -10,6 +10,7 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 
 <template>
   <main>
+    
     <nav>
       <ul>
         <FriendsIcon />
@@ -31,9 +32,10 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 #app {
   font-weight: normal;
-  background-size: contain;
+  background-size: +150%;
   background-repeat: no-repeat;
   background-image: url('@/assets/images/background.png');
+  
   /* iphone 13 mini height and width*/
   height: 812px;
   width: 375px;
@@ -45,7 +47,6 @@ main {
 }
 
 nav {
-  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -63,5 +64,15 @@ nav ul {
   margin-left: 55px;
   align-items: center;
 }
+  
+background-image {
+position: absolute;
+visibility: hidden;
+left: -94.13%;
+right: -54.13%;
+top: -13.67%;
+bottom: -0.08%;
+}
+
 
 </style>
