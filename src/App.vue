@@ -41,11 +41,11 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 
 main {
-  
+
 }
 
 nav {
-  
+
   position: absolute;
   bottom: 0;
   left: 0;
