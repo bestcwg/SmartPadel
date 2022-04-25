@@ -47,7 +47,7 @@ nav {
   width: 100%;
   height: 85px;
   background-color: black;
-  opacity: 0.80;
+  opacity: 0.60;
 }
 
 nav ul {
