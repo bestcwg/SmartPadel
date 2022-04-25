@@ -1,7 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import TestFigma from './components/TestFigma.vue'
 import FriendsIcon from './components/icons/navbar/IconFriends.vue'
 import HomeIcon from './components/icons/navbar/IconHome.vue'
 import SettingsIcon from './components/icons/navbar/IconSettings.vue'
@@ -14,7 +11,7 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
     <nav>
       <ul>
         <FriendsIcon />
-        <HomeIcon />
+        <HomeIcon/>
         <SettingsIcon />
         <ProfileIcon />
       </ul>
@@ -31,9 +28,10 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 #app {
   font-weight: normal;
-  background-size: 190% auto;
+  background-size: 173.9% auto;
   background-position-x: -220px;
   background-position-y: -250px;
+  
   background-repeat: no-repeat;
   background-image: url('@/assets/images/background.png');
 
