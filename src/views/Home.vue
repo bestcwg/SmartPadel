@@ -1,6 +1,6 @@
 <script setup>
-import SearchForMatchButton from '../components/icons/homepage/IconSearchForMatchButton.vue'
-import CreateMatchButton from '../components/icons/homepage/IconCreateMatchButton.vue'
+import SearchForMatchButton from '../components/ButtonSearchForMatch.vue'
+import CreateMatchButton from '../components/ButtonCreateMatch.vue'
 </script>
 
 <template>
@@ -8,8 +8,8 @@ import CreateMatchButton from '../components/icons/homepage/IconCreateMatchButto
         <h1>HOME</h1>
         <div class="home-match-buttoms">
             <ul>
-                <router-link to="/match"> <SearchForMatchButton /></router-link>
-                <router-link to="/createMatch"><CreateMatchButton /></router-link>
+                <SearchForMatchButton />
+                <CreateMatchButton />
             </ul>
         </div>
     </div>
@@ -25,6 +25,7 @@ import CreateMatchButton from '../components/icons/homepage/IconCreateMatchButto
     }
 
     .home-match-buttoms ul {
+        position: relative;
         display: grid;
         grid-auto-rows: 100px;
         grid-auto-flow: row;
