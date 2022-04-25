@@ -1,6 +1,6 @@
 <script setup>
-import SearchForMatchButton from '../components/icons/homepage/IconSearchForMatchButton.vue'
-import CreateMatchButton from '../components/icons/homepage/IconCreateMatchButton.vue'
+import SearchForMatchButton from '../components/ButtonSearchForMatch.vue'
+import CreateMatchButton from '../components/ButtonCreateMatch.vue'
 import Logo from '../components/icons/homepage/Logo.vue'
 </script>
 
