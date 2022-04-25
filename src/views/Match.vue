@@ -1,5 +1,5 @@
 <script setup>
-import Matchboard from '../components/icons/Match/Matchboard.vue'
+import Matchboard from '../components/match/Matchboard.vue'
 </script>
 
 
