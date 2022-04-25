@@ -6,7 +6,6 @@ import FriendsIcon from './components/icons/navbar/IconFriends.vue'
 import HomeIcon from './components/icons/navbar/IconHome.vue'
 import SettingsIcon from './components/icons/navbar/IconSettings.vue'
 import ProfileIcon from './components/icons/navbar/IconProfile.vue'
-
 </script>
 
 <template>
@@ -42,11 +41,11 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 
 main {
-  border: solid 2px black;
+  
 }
 
 nav {
-  border: solid 2px blue;
+  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -58,9 +57,11 @@ nav {
 
 nav ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 6%;
-  border: solid 2px blue;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  margin: 6%;
+  margin-left: 55px;
+  align-items: center;
 }
 
 </style>
