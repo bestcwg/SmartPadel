@@ -30,7 +30,7 @@
         text-align: center;
 
         color: #FFFFFF;
-        -webkit-text-stroke-width: 1.2px;
+        -webkit-text-stroke-width: 1.1px;
         -webkit-text-stroke-color: black;
     }
     .create-match-button img {

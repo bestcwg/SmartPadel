@@ -5,13 +5,10 @@ import Matchboard from '../components/icons/Match/Matchboard.vue'
 
 <template>
   <div class="match">
-    <h1>ddss</h1>
-     <h1>MATCH</h1>
-      <h2>board</h2>
-      <div class="home-match-buttoms">
+      <div class="home-match-buttons">
         <ul>
-     <Matchboard />
-     </ul>
+          <Matchboard />
+        </ul>
      </div>
   </div>
 </template>
