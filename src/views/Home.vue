@@ -1,11 +1,15 @@
 <script setup>
 import SearchForMatchButton from '../components/ButtonSearchForMatch.vue'
 import CreateMatchButton from '../components/ButtonCreateMatch.vue'
+import LogoPadel from '../components/LogoPadel.vue'
 </script>
 
 <template>
     <div class="home">
         <h1>HOME</h1>
+        <div class="padel-logo">
+            <LogoPadel />
+        </div>
         <div class="home-match-buttoms">
             <ul>
                 <SearchForMatchButton />
