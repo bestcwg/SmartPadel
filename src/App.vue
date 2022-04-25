@@ -32,7 +32,9 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 #app {
   font-weight: normal;
-  background-size: +150%;
+  background-size: 190% auto;
+  background-position-x: -220px;
+  background-position-y: -250px;
   background-repeat: no-repeat;
   background-image: url('@/assets/images/background.png');
   
@@ -63,16 +65,6 @@ nav ul {
   margin: 6%;
   margin-left: 55px;
   align-items: center;
-}
-  
-background-image {
-position: absolute;
-visibility: hidden;
-left: -94.13%;
-right: -54.13%;
-top: -13.67%;
-bottom: -0.08%;
-}
-
+}  
 
 </style>
