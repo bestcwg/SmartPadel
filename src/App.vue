@@ -31,10 +31,6 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 }
 #app {
   font-weight: normal;
-  background-size: 190% auto;
-  background-position-x: -220px;
-  background-position-y: -250px;
-  background-repeat: no-repeat;
   background-image: url('@/assets/images/background.png');
 
   /* iphone 13 mini height and width*/
@@ -65,5 +61,6 @@ nav ul {
   margin-left: 55px;
   align-items: center;
 }
+
 
 </style>
