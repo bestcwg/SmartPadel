@@ -1,10 +1,11 @@
 <template>
-    <button class="create-match-button">
-        <router-link to="/createMatch">
+    <router-link to="/creatematch" custom v-slot="{ navigate }">
+        <button @click="navigate" class="create-match-button">
+            <router-link to="/createMatch"></router-link>
             <p>CREATE MATCH</p>
             <img src="../assets/images/ball.png"/>
-        </router-link>
-    </button>
+        </button>
+    </router-link>
 </template>
 
 <style scoped>
