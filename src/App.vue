@@ -10,10 +10,10 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 
     <nav>
       <ul>
-        <FriendsIcon />
-        <HomeIcon/>
-        <SettingsIcon />
+        <HomeIcon />
         <ProfileIcon />
+        <FriendsIcon />
+        <SettingsIcon />
       </ul>
     </nav>
   </main>
