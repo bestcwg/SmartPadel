@@ -7,7 +7,6 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 
 <template>
   <main>
-
     <nav>
       <ul>
         <HomeIcon />

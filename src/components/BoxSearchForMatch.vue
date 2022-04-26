@@ -1,27 +1,55 @@
+<script setup>
+import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
+</script>
+
+
 <template>
-    <div id="match-time-playing">
-        <p>14:00-16:00</p>
-    </div>
-    <div id="match-players">
-        <img src="../assets/images/field.png">
-    </div>
-    <div id="match-information">
-        <ul>
-            <li id="padel-facility">1</li>
-            <li id="hours-playing">2</li>
-            <li id="amount-paying">3</li>
-        </ul>
-    </div>
-    <div id="match-join">
-        <router-link to="/match" custom v-slot="{ navigate }">
-            <button @click="navigate" id="button-join-match">
-                <p>Join Match</p>
-            </button>
-        </router-link>
+    <div class="search-match-board">
+        <div id="match-time-playing">
+            <p>14:00-16:00</p>
+        </div>
+        <div id="match-players"> 
+            <img src="../assets/images/field.png">
+            <ul>
+                <span id="player1"><WaitingForUserIcon /></span>
+                <span id="player2"><WaitingForUserIcon /></span>
+                <span id="player3"><WaitingForUserIcon /></span>
+                <span id="player4"><WaitingForUserIcon /></span>
+            </ul>
+        </div>
+        <div id="match-information">
+            <ul>
+                <li id="padel-facility">1</li>
+                <li id="hours-playing">2</li>
+                <li id="amount-paying">3</li>
+            </ul>
+        </div>
+        <div id="match-join">
+            <router-link to="/matchid" custom v-slot="{ navigate }">
+                <button @click="navigate" id="button-join-match">
+                    <p>Join Match</p>
+                </button>
+            </router-link>
+        </div>
     </div>
 </template>
 
 <style scoped>
+.search-match-board {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    left: 36px;
+    top: 100px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 48px;
+    background: linear-gradient(180deg, rgba(25, 92, 192, 0.6552) 0%, rgba(0, 0, 0, 0.91) 100%);
+    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+  }
+
 #match-players {
     position: absolute;
     left: 16.67%;
@@ -106,7 +134,7 @@
 
 #button-join-match p{
     font-family: 'Lato';
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -117,4 +145,36 @@
     -webkit-text-stroke-color: black;
 }
 
+#player1 {
+    position: absolute;
+    left: 17.5%;
+    right: 62.5%;
+    top: 12%;
+    bottom: 68%;
+}
+
+#player2{
+    position: absolute;
+    left: 65%;
+    right: 15%;
+    top: 12%;
+    bottom: 68%;
+
+}
+
+#player3{
+    position: absolute;
+    left: 17.5%;
+    right: 62.5%;
+    top: 64%;
+    bottom: 16%;
+}
+
+#player4{
+    position: absolute;
+    left: 65%;
+    right: 15%;
+    top: 64%;
+    bottom: 16%;
+}
 </style>
