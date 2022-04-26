@@ -34,5 +34,4 @@ import LogoPadel from '../components/LogoPadel.vue'
         grid-auto-rows: 100px;
         grid-auto-flow: row;
     }
-
 </style>

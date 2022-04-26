@@ -1,7 +1,6 @@
 <template>
     <router-link to="/searchformatch" custom v-slot="{ navigate }">
         <button @click="navigate" class="search-for-match-button">
-            <router-link to="/match" v-slot="{}"></router-link>
             <p>SEARCH FOR MATCH</p>
             <img src="../assets/images/ball.png"/>
         </button>
