@@ -6,9 +6,9 @@ import ContinueButton from '../components/ContinueButton.vue'
 <template>
   <div class="createMatch">
     <h1 class="h1">Location</h1>
-    <Locations></Locations>
-    <div class="home-match-buttons">
-    <ul>
+    <Locations class="locations"></Locations>
+    <div>
+    <ul class="continue">
     <ContinueButton></ContinueButton>
     </ul>
     </div>
@@ -23,22 +23,22 @@ right: -3cm;
 bottom: -2cm;
 }
 
-
-    .home-match-buttons {
+    .locations {
         position: absolute;
-        padding-left: 42px;
+        padding-left: 0px;
         display: inline-block;
         vertical-align: middle;
-        bottom: 150px;
+        bottom: 400px;
+        right: 2cm;
     }
 
 
-    .home-match-buttons ul {
+    .continue{
         position: relative;
-        left: -8.3cm;
+        left: 1.1cm;
         display: grid;
         grid-auto-rows: 100px;
         grid-auto-flow: row;
-        bottom: 1cm;
+        bottom: -14cm;
     }
 </style>
