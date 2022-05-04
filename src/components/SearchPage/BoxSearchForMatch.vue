@@ -1,5 +1,5 @@
 <script setup>
-import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
+import WaitingForUserIcon from '../icons/finding_match/IconUser.vue'
 </script>
 
 
@@ -9,7 +9,7 @@ import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
             <p>14:00-16:00</p>
         </div>
         <div id="match-players">
-            <img src="../assets/images/field.png">
+            <img src="../../assets/images/field.png">
             <ul>
                 <span id="player1"><WaitingForUserIcon /></span>
                 <span id="player2"><WaitingForUserIcon /></span>

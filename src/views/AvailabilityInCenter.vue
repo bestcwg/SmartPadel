@@ -1,6 +1,6 @@
 <script setup>
-import OverView from '../components/OverviewAvailability.vue'
-import Return from '../components/ReturnButton.vue'
+import OverView from '../components/AvailabilityPage/OverviewAvailability.vue'
+import Return from '../components/AvailabilityPage/ReturnButton.vue'
 </script>
 
 <template>

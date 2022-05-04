@@ -2,7 +2,7 @@
     <router-link to="/date" custom v-slot="{ navigate }">
         <button @click="navigate" class="create-match-button">
             <p>CONTINUE</p>
-            <img src="../assets/images/ball.png"/>
+            <img src="../../assets/images/ball.png"/>
         </button>
     </router-link>
 </template>

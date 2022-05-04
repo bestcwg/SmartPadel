@@ -2,7 +2,7 @@
 </script>
 
 <template>
- <img class="list" src="../assets/images/date.png"/>
+ <img class="list" src="../../assets/images/date.png"/>
 </template>
 
 

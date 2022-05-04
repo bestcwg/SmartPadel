@@ -1,6 +1,6 @@
 <script setup>
-import Date from '../components/DateComponent.vue'
-import ContinueDate from '../components/ContinueDateButton.vue'
+import Date from '../components/DatePage/DateComponent.vue'
+import ContinueDate from '../components/DatePage/ContinueDateButton.vue'
 </script>
 
 <template>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<img class="pic" src="../assets/images/lowbar.png"/>
+<img class="pic" src="../../assets/images/lowbar.png"/>
 </template>
 
 <style scoped>

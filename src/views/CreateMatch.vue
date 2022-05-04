@@ -1,6 +1,6 @@
 <script setup>
-import Locations from '../components/Locations.vue';
-import ContinueButton from '../components/ContinueButton.vue'
+import Locations from '../components/LocationPage/Locations.vue';
+import ContinueButton from '../components/LocationPage/ContinueButton.vue'
 </script>
 
 <template>

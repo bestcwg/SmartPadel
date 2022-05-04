@@ -1,25 +1,26 @@
 <template>
-    <router-link to="/time" custom v-slot="{ navigate }">
-        <button @click="navigate" class="create-match-button">
-            <p>RETURN</p>
-            <img src="../assets/images/ball.png"/>
+    <router-link to="/searchformatch" custom v-slot="{ navigate }">
+        <button @click="navigate" class="search-for-match-button">
+            <p>SEARCH FOR MATCH</p>
+            <img src="../../assets/images/ball.png"/>
         </button>
     </router-link>
 </template>
 
 <style scoped>
-    .create-match-button {
+    .search-for-match-button {
         position: relative;
         width: 284px;
         height: 64px;
         border: none;
         color: white;
-        background: #75908F;
+        background: #1B8E87;
         mix-blend-mode: normal;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
         border-radius: 30px;
     }
-    .create-match-button p {
+    .search-for-match-button p {
         position: absolute;
         left: 0.35%;
         right: 13.38%;
@@ -33,7 +34,8 @@
         -webkit-text-stroke-width: 1.1px;
         -webkit-text-stroke-color: black;
     }
-    .create-match-button img {
+
+    .search-for-match-button img {
         position: absolute;
         left: 76.06%;
         right: 13.38%;

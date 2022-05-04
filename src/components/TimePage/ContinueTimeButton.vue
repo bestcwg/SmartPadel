@@ -1,8 +1,8 @@
 <template>
-    <router-link to="/time" custom v-slot="{ navigate }">
+    <router-link to="/searchformatch" custom v-slot="{ navigate }">
         <button @click="navigate" class="create-match-button">
-            <p>CONTINUE</p>
-            <img src="../assets/images/ball.png"/>
+            <p>CREATE</p>
+            <img src="../../assets/images/ball.png"/>
         </button>
     </router-link>
 </template>
