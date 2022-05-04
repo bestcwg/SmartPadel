@@ -10,6 +10,6 @@ import SearchForMatchBox from '../components/BoxSearchForMatch.vue';
 
 
 <style scoped>
-  
+
 </style>
 

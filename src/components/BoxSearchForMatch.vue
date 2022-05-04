@@ -8,7 +8,7 @@ import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
         <div id="match-time-playing">
             <p>14:00-16:00</p>
         </div>
-        <div id="match-players"> 
+        <div id="match-players">
             <img src="../assets/images/field.png">
             <ul>
                 <span id="player1"><WaitingForUserIcon /></span>
