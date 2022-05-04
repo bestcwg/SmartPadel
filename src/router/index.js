@@ -6,6 +6,7 @@ import Date from '../views/Date.vue'
 import Time from '../views/Time.vue'
 import Availability from '../views/AvailabilityInCenter.vue'
 
+
 const routes = [
     {path: '/', name: 'Home', component: Home},
     {path: '/searchformatch', name: 'SearchForMatch', component: SearchForMatch},
@@ -19,5 +20,6 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
+
 
 export default router

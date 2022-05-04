@@ -1,5 +1,6 @@
 <script setup>
 import SearchForMatchBox from '../components/SearchPage/BoxSearchForMatch.vue';
+
 </script>
 
 <template>
