@@ -1,6 +1,7 @@
 <script setup>
 import Time from '../components/TimeComponent.vue'
 import ContinueTime from '../components/ContinueTimeButton.vue'
+import Availability from '../components/AvailabilityButton.vue'
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import ContinueTime from '../components/ContinueTimeButton.vue'
     <ul class="conTime">
     <ContinueTime></ContinueTime>
     </ul>
-    <h3 class="h3">Availability</h3>
+    <Availability></Availability>
     </div>
 
   </div>

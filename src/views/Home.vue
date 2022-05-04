@@ -6,7 +6,7 @@ import LogoPadel from '../components/LogoPadel.vue'
 
 <template>
     <div class="home">
-        
+
         <div class="padel-logo">
             <LogoPadel />
         </div>
