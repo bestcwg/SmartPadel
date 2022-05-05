@@ -1,22 +1,19 @@
-
-
 <script setup>
 import {ref} from 'vue'
 import {useStore} from 'vuex'
 
-      const login_form = ref({});
-      const register_form = ref({});
-      const store = useStore();
+const login_form = ref({});
+const register_form = ref({});
+const store = useStore();
 
-      const login = () => {
-        store.dispatch('login', login_form.value);
-      }
+const login = () => {
+  store.dispatch('login', login_form.value);
+}
 
-      const register = () => {
-        store.dispatch('register', register_form.value);
-      }
+const register = () => {
+  store.dispatch('register', register_form.value);
+}
 </script>
-
 
 <template>
   <main class="Login">
