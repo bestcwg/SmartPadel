@@ -1,11 +1,11 @@
 <script setup>
 import SearchForMatchBox from '../components/SearchPage/BoxSearchForMatch.vue';
-
+import SearchForMatchBoxTest from '../components/BoxSearchForMatchDBTest.vue';
 </script>
 
 <template>
   <div class="search-match">
-    <SearchForMatchBox />
+    <SearchForMatchBoxTest />
   </div>
 </template>
 

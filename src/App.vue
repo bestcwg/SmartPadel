@@ -3,6 +3,13 @@ import FriendsIcon from './components/icons/navbar/IconFriends.vue'
 import HomeIcon from './components/icons/navbar/IconHome.vue'
 import SettingsIcon from './components/icons/navbar/IconSettings.vue'
 import ProfileIcon from './components/icons/navbar/IconProfile.vue'
+
+// For testing queries of the database the little button in the left corner
+// THIS CAN BE DELETED AFTER THE APP IS FINISHED
+import { VueQueryDevTools } from "vue-query/devtools";
+import { useQueryProvider } from 'vue-query';
+
+useQueryProvider();
 </script>
 
 <template>
@@ -17,6 +24,7 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
     </nav>
   </main>
   <router-view></router-view>
+  <VueQueryDevTools :initialIsOpen="false" />
 </template>
 
 <style>
