@@ -1,7 +1,7 @@
 <script setup>
 import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
 import { useQuery, useQueryClient } from 'vue-query';
-import { getAllMatches } from '../firebase-functions';
+import { getAllMatches, addMatch } from '../firebase-functions';
 
 const queryClient = useQueryClient();
 
@@ -23,20 +23,20 @@ const { data } = useQuery(
             <img src="../assets/images/field.png">
             <ul>
                 <span id="player1">
-                    <div v-if="item.players.id[0] == null"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id[0] }}</div>
+                    <div v-if="item.players.id.player1 == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.id.player1 }}</div>
                 </span>
                 <span id="player2">
-                    <div v-if="item.players.id[1] == null"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id[1] }}</div>
+                    <div v-if="item.players.id.player2 == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.id.player2 }}</div>
                 </span>
                 <span id="player3">
-                    <div v-if="item.players.id[2] == null"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id[2] }}</div>
+                    <div v-if="item.players.id.player3 == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.id.player3 }}</div>
                 </span>
                 <span id="player4">
-                    <div v-if="item.players.id[3] == null"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id[3] }}</div>
+                    <div v-if="item.players.id.player4 == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.id.player4 }}</div>
                 </span>
             </ul>
         </div>
