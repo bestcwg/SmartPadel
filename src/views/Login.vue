@@ -1,13 +1,9 @@
 
 
-<script>
+<script setup>
 import {ref} from 'vue'
 import {useStore} from 'vuex'
 
-
-
-export default {
-    setup() {
       const login_form = ref({});
       const register_form = ref({});
       const store = useStore();
@@ -19,17 +15,6 @@ export default {
       const register = () => {
         store.dispatch('register', register_form.value);
       }
-
-      return {
-        login_form,
-        register_form,
-        login,
-        register,
-
-      }
-
-    }
-}
 </script>
 
 
