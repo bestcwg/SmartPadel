@@ -1,26 +1,32 @@
+<script>
+export default {
+
+}
+</script>
+
+
 <template>
     <router-link to="/searchformatch" custom v-slot="{ navigate }">
-        <button @click="navigate" class="search-for-match-button">
-            <p>SEARCH FOR MATCH</p>
-            <img src="../assets/images/ball.png"/>
+        <button @click="navigate(); addComponent()" class="create-match-button">
+            <p>CREATE</p>
+            <img src="../../assets/images/ball.png"/>
         </button>
     </router-link>
 </template>
 
 <style scoped>
-    .search-for-match-button {
+    .create-match-button {
         position: relative;
         width: 284px;
         height: 64px;
         border: none;
         color: white;
-        background: #1B8E87;    
+        background: #75908F;
         mix-blend-mode: normal;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        
         border-radius: 30px;
     }
-    .search-for-match-button p {
+    .create-match-button p {
         position: absolute;
         left: 0.35%;
         right: 13.38%;
@@ -34,8 +40,7 @@
         -webkit-text-stroke-width: 1.1px;
         -webkit-text-stroke-color: black;
     }
-
-    .search-for-match-button img {
+    .create-match-button img {
         position: absolute;
         left: 76.06%;
         right: 13.38%;

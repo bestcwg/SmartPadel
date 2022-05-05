@@ -1,5 +1,5 @@
 <script setup>
-import SearchForMatchBox from '../components/BoxSearchForMatch.vue';
+import SearchForMatchBox from '../components/SearchPage/BoxSearchForMatch.vue';
 import SearchForMatchBoxTest from '../components/BoxSearchForMatchDBTest.vue';
 </script>
 
@@ -11,6 +11,6 @@ import SearchForMatchBoxTest from '../components/BoxSearchForMatchDBTest.vue';
 
 
 <style scoped>
-  
+
 </style>
 

@@ -1,12 +1,12 @@
 <script setup>
-import SearchForMatchButton from '../components/ButtonSearchForMatch.vue'
-import CreateMatchButton from '../components/ButtonCreateMatch.vue'
-import LogoPadel from '../components/LogoPadel.vue'
+import SearchForMatchButton from '../components/Homepage/ButtonSearchForMatch.vue'
+import CreateMatchButton from '../components/Homepage/ButtonCreateMatch.vue'
+import LogoPadel from '../components/Homepage/LogoPadel.vue'
 </script>
 
 <template>
     <div class="home">
-        
+
         <div class="padel-logo">
             <LogoPadel />
         </div>

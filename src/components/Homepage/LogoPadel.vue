@@ -1,7 +1,7 @@
 <template>
-    <img class="logo-line" src="../assets/images/logo/Line.png"/>
-    <img class="logo-image" src="../assets/images/logo/Logo.png"/>
-    <img class="logo-text" src="../assets/images/logo/SmartPadel.png"/>
+    <img class="logo-line" src="../../assets/images/logo/Line.png"/>
+    <img class="logo-image" src="../../assets/images/logo/Logo.png"/>
+    <img class="logo-text" src="../../assets/images/logo/SmartPadel.png"/>
 </template>
 
 <style scoped>
