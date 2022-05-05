@@ -1,34 +1,37 @@
+<script setup>
+import SearchForMatchButton from '../components/Homepage/ButtonSearchForMatch.vue'
+import CreateMatchButton from '../components/Homepage/ButtonCreateMatch.vue'
+import LogoPadel from '../components/Homepage/LogoPadel.vue'
+</script>
+
 <template>
     <div class="home">
-        <h1>HOME</h1>
-        <router-link to="/match"> <button class="button">FIND MATCH</button></router-link>
-        <router-link to="/createMatch"> <button class="button">Create MATCH</button></router-link>
+
+        <div class="padel-logo">
+            <LogoPadel />
+        </div>
+        <div class="home-match-buttons">
+            <ul>
+                <SearchForMatchButton />
+                <CreateMatchButton />
+            </ul>
+        </div>
     </div>
 </template>
 
-<style>
-    .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+<style scoped>
+    .home-match-buttons {
+        position: absolute;
+        padding-left: 42px;
+        display: inline-block;
+        vertical-align: middle;
+        bottom: 150px;
     }
 
-    .SearchForMatchButton {
-
-    position: absolute;
-    width: 284px;
-    height: 64px;
-    left: 45px;
-    top: 540px;
-
-    background: #1B8E87;
-    mix-blend-mode: normal;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+    .home-match-buttons ul {
+        position: relative;
+        display: grid;
+        grid-auto-rows: 100px;
+        grid-auto-flow: row;
     }
 </style>
