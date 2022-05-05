@@ -17,6 +17,8 @@ const { data } = useQuery(
 );
 </script>
 
+
+
 <template>
 <section v-for="item in data" :key="item.id">
     <div class="search-match-board">
