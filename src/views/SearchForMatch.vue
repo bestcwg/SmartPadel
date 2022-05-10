@@ -12,7 +12,6 @@ const { data } = useQuery(
     database.getAllMatches
 );
 
-database.test();
 </script>
 
 <template>

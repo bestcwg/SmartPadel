@@ -6,10 +6,10 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
 <template>
   <div class="createMatch">
     <h1 class="h1">Location</h1>
-    <Locations class="locations"></Locations>
+    <Locations class="locations"/>
     <div>
     <ul class="continue">
-    <ContinueButton></ContinueButton>
+    <ContinueButton/>
     </ul>
     </div>
   </div>

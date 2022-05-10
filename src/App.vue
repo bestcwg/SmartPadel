@@ -8,7 +8,14 @@ import ProfileIcon from './components/icons/navbar/IconProfile.vue'
 // THIS CAN BE DELETED AFTER THE APP IS FINISHED
 import { VueQueryDevTools } from "vue-query/devtools";
 import { useQueryProvider } from 'vue-query';
+import { onBeforeMount } from 'vue'
+import { useStore } from 'vuex'
 
+const store = useStore()
+
+onBeforeMount(() => {
+  store.dispatch('fetchUser')
+})
 useQueryProvider();
 </script>
 
@@ -23,9 +30,11 @@ useQueryProvider();
       </ul>
     </nav>
   </main>
+
   <router-view></router-view>
   <VueQueryDevTools :initialIsOpen="false" />
 </template>
+
 
 <style>
 /* @import './assets/base.css'; */
@@ -65,6 +74,5 @@ nav ul {
   margin-left: 55px;
   align-items: center;
 }
-
 
 </style>
