@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../views/Home.vue'
+import Settings from '../views/Settings.vue'
 import SearchForMatch from '../views/SearchForMatch.vue'
 import CreateMatch from '../views/CreateMatch.vue'
 import Date from '../views/Date.vue'
@@ -56,6 +57,7 @@ const routes = [
             requiresAtuh: true
         }
     },
+
     {
         path: '/availability', 
         name: 'Availability', 
@@ -63,7 +65,20 @@ const routes = [
         meta: {
             requiresAtuh: true
         }
+    }, 
+
+    {
+        path: '/settings', 
+        name: 'Settings', 
+        component: Settings,
+        
     }
+
+
+
+
+
+    
 ]
 
 const router = createRouter({
