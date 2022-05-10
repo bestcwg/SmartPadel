@@ -12,6 +12,8 @@ const { data } = useQuery(
     database.getAllMatches
 );
 
+database.addPlayerToMatch(2,"ONMbXv1Ad9sHE05pOZfh");
+
 </script>
 
 <template>

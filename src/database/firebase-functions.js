@@ -15,15 +15,22 @@ export async function getMatchByID(matchid) {
 
     const results = [];
     const matchRef = doc(db, "Matches", matchid);
+    const playersRef = collection(matchRef, "players");
+    const playersSnap = await getDocs(playersRef);
     const snap = await getDoc(matchRef);
-
-    results.push({id:snap.id, ...snap.data()});
+    const players = [];
+    playersSnap.forEach((player) => {
+        players.push(player.data().id);
+    })
+    results.push({id:snap.id, ...snap.data(), players: players});
+    //results.push({players: players});
+    console.log("Matchid: ", matchid, "data: ", results);
     return results;
 }
 
 ///////////////////// TEST ////////////////////////
 
-export async function test() {
+export async function createMatchTest() {
     try {
         const docRef = await addDoc(collection(db, "Matches"), {
           cost: 140,
@@ -50,39 +57,27 @@ export async function test() {
       }
 }
 
-
-const thisMatch = {
-    match: 'test'
-};
-
-export function addMatch() {
-    return addDoc(collection(db,"Matches"),thisMatch);
-}
-
 export async function addPlayerToMatch(playerid, matchid) {
-    const playersRef = doc(db, "Matches", matchid);
+    const matchRef = doc(db, "Matches", matchid);
+    const playersRef = collection(matchRef, "players");
 
-    /*const test = getDoc(collection(getFirestore(), playersRef));
-
-    console.log(test);*/
-
-    const player1 = doc(db, "Matches", matchid);
     //const docSnap = await getDoc(player1);
-    const docSnap = await getDocs(collection(getFirestore(),"Matches"));
-
-    if (docSnap.exists()) {
-        docSnap.forEach((doclol) => {
-            console.log("Document data:", doclol.players);
-        });
-    } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
+    const docSnap = await getDocs(playersRef);
+    console.log("Add player to match:");
+    //console.log(docSnap.data().players.player1);
+    if(docSnap.size >= 4) {
+        alert('MATCH IS FULL!');
+        return;
     }
-    /*
-    return updateDoc(playersRef, {
-        player1: playerid
-    })
-    */
+
+    try {
+        const docRef = await addDoc(playersRef, {
+          id: playerid
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
 }
 
 

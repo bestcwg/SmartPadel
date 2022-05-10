@@ -15,9 +15,8 @@ const { data } = useQuery(
     ["GetMatchWithID",props.matchID],
     () => database.getMatchByID(props.matchID)
 );
+
 </script>
-
-
 
 <template>
 <section v-for="item in data" :key="item.id">
@@ -27,22 +26,10 @@ const { data } = useQuery(
         </div>
         <div id="match-players"> 
             <img src="../../assets/images/field.png">
-            <ul>
-                <span id="player1">
-                    <div v-if="item.players.player1.id == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.player1.id }}</div>
-                </span>
-                <span id="player2">
-                    <div v-if="item.players.player2.id == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.player2.id }}</div>
-                </span>
-                <span id="player3">
-                    <div v-if="item.players.player3.id == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.player3.id }}</div>
-                </span>
-                <span id="player4">
-                    <div v-if="item.players.player4.id == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.player4.id }}</div>
+            <ul v-for="n in 4" :key="n.id">
+                <span :id="`player${n}`">
+                    <div v-if="!item.players[n-1]"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players[n-1] }}</div>
                 </span>
             </ul>
         </div>
@@ -63,6 +50,7 @@ const { data } = useQuery(
     </div>
 </section>
 </template>
+
 
 <style scoped>
 .search-match-board {

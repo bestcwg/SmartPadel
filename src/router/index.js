@@ -73,12 +73,6 @@ const routes = [
         component: Settings,
         
     }
-
-
-
-
-
-    
 ]
 
 const router = createRouter({
