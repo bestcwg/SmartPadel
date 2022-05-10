@@ -8,7 +8,7 @@ import Date from '../views/Date.vue'
 import Time from '../views/Time.vue'
 import Availability from '../views/AvailabilityInCenter.vue'
 import Login from '../views/Login.vue'
-import { auth } from '../firebase-config'
+import { auth } from '../database/firebase-config'
 
 const routes = [
     {
