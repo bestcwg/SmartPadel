@@ -16,8 +16,5 @@ width: 107px;
 height: 39px;
 left: 126px;
 top: 648px;
-
 }
-
-
 </style>

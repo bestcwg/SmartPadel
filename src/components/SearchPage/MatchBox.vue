@@ -37,7 +37,7 @@ const { data } = useQuery(
             <ul>
                 <li id="padel-facility">{{ item.facility }}</li>
                 <li id="hours-playing">test</li>
-                <li id="amount-paying">{{ item.cost }} DKK</li>
+                <li id="amount-paying">{{ item.cost }}<p>DKK</p></li>
             </ul>
         </div>
         <div id="match-join">

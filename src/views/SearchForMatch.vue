@@ -12,7 +12,7 @@ const { data } = useQuery(
     database.getAllMatches
 );
 
-database.addPlayerToMatch(2,"ONMbXv1Ad9sHE05pOZfh");
+database.removePlayerFromMatch(2, "5wDOk3YZkzodWCIpGBeh");
 
 </script>
 

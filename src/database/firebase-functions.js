@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, getFirestore, doc, updateDoc, getDoc, query, where } from 'firebase/firestore';
+import { limit, deleteDoc ,addDoc, collection, getDocs, getFirestore, doc, updateDoc, getDoc, query, where } from 'firebase/firestore';
 import { db } from './firebase-config';
 
 export const getAllMatches = async () => {
@@ -15,17 +15,57 @@ export async function getMatchByID(matchid) {
 
     const results = [];
     const matchRef = doc(db, "Matches", matchid);
+    const matchSnap = await getDoc(matchRef);
+
+    const players = [];
     const playersRef = collection(matchRef, "players");
     const playersSnap = await getDocs(playersRef);
-    const snap = await getDoc(matchRef);
-    const players = [];
+
     playersSnap.forEach((player) => {
         players.push(player.data().id);
     })
-    results.push({id:snap.id, ...snap.data(), players: players});
+    results.push({id:matchSnap.id, ...matchSnap.data(), players: players});
     //results.push({players: players});
-    console.log("Matchid: ", matchid, "data: ", results);
     return results;
+}
+
+export async function addPlayerToMatch(playerid, matchid) {
+    const matchRef = doc(db, "Matches", matchid);
+    const playersRef = collection(matchRef, "players");
+
+    const docSnap = await getDocs(playersRef);
+    if(docSnap.size >= 4) {
+        alert('MATCH IS FULL!');
+        return;
+    }
+
+    try {
+        const docRef = await addDoc(playersRef, {
+          id: playerid
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+}
+
+export async function removePlayerFromMatch(playerid, matchid) {
+    const matchRef = doc(db, "Matches", matchid);
+    const playersRef = collection(matchRef, "players");
+
+    try {
+        const q = query(playersRef, where("id", "==", playerid));
+        const snap = await getDocs(q);
+        const playerDocID = [];
+
+        snap.forEach((doc) => {
+            playerDocID.push(doc.id);
+        })
+
+        await deleteDoc(doc(playersRef, playerDocID[0]));
+    } catch (e) {
+        console.error("Error deleting player doc: ", e);
+    }
 }
 
 ///////////////////// TEST ////////////////////////
@@ -57,27 +97,6 @@ export async function createMatchTest() {
       }
 }
 
-export async function addPlayerToMatch(playerid, matchid) {
-    const matchRef = doc(db, "Matches", matchid);
-    const playersRef = collection(matchRef, "players");
-
-    //const docSnap = await getDoc(player1);
-    const docSnap = await getDocs(playersRef);
-    console.log("Add player to match:");
-    //console.log(docSnap.data().players.player1);
-    if(docSnap.size >= 4) {
-        alert('MATCH IS FULL!');
-        return;
-    }
-
-    try {
-        const docRef = await addDoc(playersRef, {
-          id: playerid
-        });
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-}
+////////////////////////////////////////////////////////////
 
 
