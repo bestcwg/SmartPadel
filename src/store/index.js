@@ -8,11 +8,12 @@ import {
 } from 'firebase/auth'
 
 
-export default createStore( {
+export default createStore({
   state: {
     user: null
   },
-  muteations: {
+  mutations: {
+
     SET_USER (state, user) {
       state.user = user
     },
@@ -21,7 +22,7 @@ export default createStore( {
       state.user = null
     }
   },
-
+  
   actions: {
     async login ({  commit  }, details){
       const { email, password } = details
@@ -80,9 +81,22 @@ export default createStore( {
       await signOut(auth)
 
       commit('CLEAR_USER')
+
       router.push('/login')
+    },
+
+   fetchUser ({ commit }) {
+      auth.onAuthStateChanged(async user => {
+        if (user === null) {
+          commit('CLEAR_USER')
+        } else {
+          commit('SET_USER', user)
+
+          if (router.isReady() && router.currentRoute.value.path === '/login') {
+            router.push('/')
+          }
+        }
+      })
     }
-  },
-
-
+  }
 })

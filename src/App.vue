@@ -11,21 +11,40 @@ import { useQueryProvider } from 'vue-query';
 
 useQueryProvider();
 </script>
-
 <template>
-  <main>
-    <nav>
-      <ul>
-        <HomeIcon />
-        <ProfileIcon />
-        <FriendsIcon />
-        <SettingsIcon />
-      </ul>
-    </nav>
-  </main>
-  <router-view></router-view>
-  <VueQueryDevTools :initialIsOpen="false" />
-</template>
+  
+    <main>
+      <nav>
+        <ul>
+          <HomeIcon />
+          <ProfileIcon />
+          <FriendsIcon />
+          <SettingsIcon />
+        </ul>
+      </nav>
+    </main>
+    <button @click="$store.dispatch('logout')">Logout</button>
+    
+    <router-view></router-view>
+    <VueQueryDevTools :initialIsOpen="false" />
+  </template>
+
+<script>
+import { onBeforeMount } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup() {
+    const store = useStore()
+
+    onBeforeMount(() => {
+      store.dispatch('fetchUser')
+    })
+  }
+}
+</script>
+
+
 
 <style>
 /* @import './assets/base.css'; */
