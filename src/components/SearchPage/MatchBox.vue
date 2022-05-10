@@ -1,17 +1,21 @@
 <script setup>
-import WaitingForUserIcon from '../components/icons/finding_match/IconUser.vue'
-import { useQuery, useQueryClient } from 'vue-query';
-import { getAllMatches, addMatch } from '../firebase-functions';
+import WaitingForUserIcon from '../icons/finding_match/IconUser.vue'
+import { useQuery, useQueryClient, useQueries } from 'vue-query';
+import  * as database from '../../database/firebase-functions';
+
+import { getIdToken } from 'firebase/auth';
 
 const queryClient = useQueryClient();
 
+const props = defineProps({
+    matchID: String
+})
+
 const { data } = useQuery(
-    "Matches",
-    getAllMatches
+    ["GetMatchWithID",props.matchID],
+    () => database.getMatchByID(props.matchID)
 );
-
 </script>
-
 
 <template>
 <section v-for="item in data" :key="item.id">
@@ -20,23 +24,23 @@ const { data } = useQuery(
             <p>{{ item.date }}</p>
         </div>
         <div id="match-players"> 
-            <img src="../assets/images/field.png">
+            <img src="../../assets/images/field.png">
             <ul>
                 <span id="player1">
-                    <div v-if="item.players.id.player1 == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id.player1 }}</div>
+                    <div v-if="item.players.player1.id == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.player1.id }}</div>
                 </span>
                 <span id="player2">
-                    <div v-if="item.players.id.player2 == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id.player2 }}</div>
+                    <div v-if="item.players.player2.id == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.player2.id }}</div>
                 </span>
                 <span id="player3">
-                    <div v-if="item.players.id.player3 == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id.player3 }}</div>
+                    <div v-if="item.players.player3.id == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.player3.id }}</div>
                 </span>
                 <span id="player4">
-                    <div v-if="item.players.id.player4 == 0"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players.id.player4 }}</div>
+                    <div v-if="item.players.player4.id == 0"><WaitingForUserIcon /></div>
+                    <div v-else>{{ item.players.player4.id }}</div>
                 </span>
             </ul>
         </div>
@@ -63,8 +67,6 @@ const { data } = useQuery(
     position: absolute;
     width: 300px;
     height: 400px;
-    left: 36px;
-    top: 100px;
 
     border: 1px solid #000000;
     box-sizing: border-box;
