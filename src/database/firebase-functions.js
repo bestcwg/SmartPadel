@@ -25,10 +25,24 @@ export async function getMatchByID(matchid) {
 
 export async function test() {
     try {
-        const docRef = await addDoc(collection(db, "Users"), {
-          first: "Ada",
-          last: "Lovelace",
-          born: 1815
+        const docRef = await addDoc(collection(db, "Matches"), {
+          cost: 140,
+          date: "januar 1.",
+          facility: "Padel center",
+          players: {
+              player1: {
+                  id: 0
+              },
+              player2: {
+                  id: 0
+              },
+              player3: {
+                  id: 0
+              },
+              player4: {
+                  id: 0
+              }
+          }
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {

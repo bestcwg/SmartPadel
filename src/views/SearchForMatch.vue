@@ -11,6 +11,8 @@ const { data } = useQuery(
     "MatchesIDs",
     database.getAllMatches
 );
+
+database.test();
 </script>
 
 <template>
