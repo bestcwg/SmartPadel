@@ -39,6 +39,9 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login,
+        meta: {
+            requiresAtuh: false
+        }
         
     },
     {
@@ -79,20 +82,10 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
-
-  
-  router.beforeEach((to, from, next) => {
-    if (to.path === '/login' && auth.currentUser) {
-      next('/')
-      return;
-    }
-  
-    if (to.matched.some(record => record.meta.requiresAuth) && !auth.currentUser) {
-      next('/login')
-      return;
-    }
-  
-    next();
+router.beforeEach((to, from, next) => {
+    if (to.name !== 'Login' && !auth.currentUser) next({ name: 'Login' })
+    else next()
   })
+  
 
 export default router   

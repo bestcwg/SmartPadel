@@ -17,8 +17,6 @@ database.addPlayerToMatch(9, "x3duCPjNMD2IMih6ukZG");
 //database.createMatchTest();
 
 
-
-
 </script>
 
 <template>
