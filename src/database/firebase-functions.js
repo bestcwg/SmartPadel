@@ -12,7 +12,6 @@ export const getAllMatches = async () => {
 }
 
 export async function getMatchByID(matchid) {
-
     const results = [];
     const matchRef = doc(db, "Matches", matchid);
     const matchSnap = await getDoc(matchRef);
@@ -44,9 +43,9 @@ export async function addPlayerToMatch(playerid, matchid) {
           id: playerid
         });
         console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
+    } catch (e) {
         console.error("Error adding document: ", e);
-      }
+    }
 }
 
 export async function removePlayerFromMatch(playerid, matchid) {
@@ -76,20 +75,11 @@ export async function createMatchTest() {
           cost: 140,
           date: "januar 1.",
           facility: "Padel center",
-          players: {
-              player1: {
-                  id: 0
-              },
-              player2: {
-                  id: 0
-              },
-              player3: {
-                  id: 0
-              },
-              player4: {
-                  id: 0
-              }
-          }
+        });
+        await addDoc(db,"Matches", "players", {
+            cost: 140,
+            date: "januar 1.",
+            facility: "Padel center",
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
