@@ -24,9 +24,8 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     user = user.uid;
   } else {
-      console.log("Not logged in!");
+    console.log("Not logged in!");
   }
-
 });
 
 const playerJoinMatch = async (matchid) => {

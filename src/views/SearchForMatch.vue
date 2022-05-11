@@ -13,9 +13,8 @@ const { data } = useQuery(
 );
 
 //database.removePlayerFromMatch(9, "5wDOk3YZkzodWCIpGBeh");
-database.addPlayerToMatch(9, "x3duCPjNMD2IMih6ukZG");
+//database.addPlayerToMatch(9, "x3duCPjNMD2IMih6ukZG");
 //database.createMatchTest();
-
 
 </script>
 
