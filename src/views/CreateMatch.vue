@@ -19,26 +19,26 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
 .h1{
   color: white;
   position: relative;
-right: -3cm;
-bottom: -2cm;
+  right: -3cm;
+  bottom: -2cm;
 }
 
-    .locations {
-        position: absolute;
-        padding-left: 0px;
-        display: inline-block;
-        vertical-align: middle;
-        bottom: 400px;
-        right: 2cm;
-    }
+.locations {
+  position: absolute;
+  padding-left: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  bottom: 400px;
+  right: 2cm;
+}
 
 
-    .continue{
-        position: relative;
-        left: 1.1cm;
-        display: grid;
-        grid-auto-rows: 100px;
-        grid-auto-flow: row;
-        bottom: -14cm;
-    }
+.continue{
+  position: relative;
+  left: 1.1cm;
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row;
+  bottom: -14cm;
+}
 </style>

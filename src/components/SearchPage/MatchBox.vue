@@ -2,8 +2,9 @@
 import WaitingForUserIcon from '../icons/finding_match/IconUser.vue'
 import { useQuery, useQueryClient, useQueries } from 'vue-query';
 import  * as database from '../../database/firebase-functions';
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getIdToken } from 'firebase/auth';
+import router from '../../router';
 
 const queryClient = useQueryClient();
 
@@ -16,6 +17,26 @@ const { data } = useQuery(
     () => database.getMatchByID(props.matchID)
 );
 
+const auth = getAuth();
+const user = auth.currentUser.uid;
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    user = user.uid;
+  } else {
+      console.log("Not logged in!");
+  }
+
+});
+
+const playerJoinMatch = async (matchid) => {
+    const result = await database.addPlayerToMatch(user, matchid)
+    if (result == true) {
+        router.push("/match/" + matchid);
+    } else {
+        alert("Match is full!");
+    }
+}
 </script>
 
 <template>
@@ -41,16 +62,20 @@ const { data } = useQuery(
             </ul>
         </div>
         <div id="match-join">
+            <!--
             <router-link :to="`/match/${item.id}`" custom v-slot="{ navigate }">
                 <button @click="navigate" id="button-join-match">
                     <p>Join Match</p>
                 </button>
             </router-link>
+            -->
+            <button @click="playerJoinMatch(item.id)" id="button-join-match">
+                <p>Join Match</p>
+            </button>
         </div>
     </div>
 </section>
 </template>
-
 
 <style scoped>
 .search-match-board {

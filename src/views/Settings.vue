@@ -3,7 +3,6 @@ import logoutButton from '../components/SettingsPage/logoutButton.vue'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const auth = getAuth();
-
 </script>
 
 <template>
@@ -13,12 +12,7 @@ const auth = getAuth();
     </div>
     <div v-else></div>
 </div>
-
-  
 </template>
 
-
-
 <style scoped>
-
 </style>

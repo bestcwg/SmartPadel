@@ -13,24 +13,10 @@ const { data } = useQuery(
 );
 
 //database.removePlayerFromMatch(9, "5wDOk3YZkzodWCIpGBeh");
-database.addPlayerToMatch(9, "5wDOk3YZkzodWCIpGBeh");
+database.addPlayerToMatch(9, "x3duCPjNMD2IMih6ukZG");
+//database.createMatchTest();
 
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    const email = user.email;
-    console.log("logged in user: ",uid, "User Email: ", email);
-  
-    // ...
-  } else {
-    // User is signed out
-    // ...
-    console.log("Logged out");
-  }
-});
+
 
 
 </script>

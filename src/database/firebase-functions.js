@@ -24,7 +24,7 @@ export async function getMatchByID(matchid) {
         players.push(player.data().id);
     })
     results.push({id:matchSnap.id, ...matchSnap.data(), players: players});
-    //results.push({players: players});
+    
     return results;
 }
 
@@ -34,8 +34,7 @@ export async function addPlayerToMatch(playerid, matchid) {
 
     const docSnap = await getDocs(playersRef);
     if(docSnap.size >= 4) {
-        alert('MATCH IS FULL!');
-        return;
+        return false;
     }
 
     try {
@@ -46,6 +45,7 @@ export async function addPlayerToMatch(playerid, matchid) {
     } catch (e) {
         console.error("Error adding document: ", e);
     }
+    return true;
 }
 
 export async function removePlayerFromMatch(playerid, matchid) {
@@ -69,17 +69,12 @@ export async function removePlayerFromMatch(playerid, matchid) {
 
 ///////////////////// TEST ////////////////////////
 
-export async function createMatchTest() {
+export async function createMatchTest(matchData) {
     try {
         const docRef = await addDoc(collection(db, "Matches"), {
-          cost: 140,
-          date: "januar 1.",
-          facility: "Padel center",
-        });
-        await addDoc(db,"Matches", "players", {
-            cost: 140,
-            date: "januar 1.",
-            facility: "Padel center",
+          cost: matchData.cost,
+          date: matchData.date,
+          facility: matchData.facility,
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
