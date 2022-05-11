@@ -7,8 +7,6 @@
     
 </template>
 
-
-
 <style scoped>
 .log-out-button {
 position: absolute;
