@@ -4,8 +4,12 @@ import { auth } from '../database/firebase-config'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  getAuth
 } from 'firebase/auth'
+
+
+const user = auth.currentUser;
 
 
 export default createStore({
@@ -22,7 +26,7 @@ export default createStore({
       state.user = null
     }
   },
-  
+
   actions: {
     async login ({  commit  }, details){
       const { email, password } = details
@@ -52,7 +56,7 @@ export default createStore({
       const { email, password } = details
 
       try{
-        await createUserWithEmailAndPassword(auth, email, password)
+        await createUserWithEmailAndPassword(email, password)
       } catch (error) {
         switch(error.code){
           case 'auth/email-already-in-use':
