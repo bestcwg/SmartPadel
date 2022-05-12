@@ -5,8 +5,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  getAuth
+  getAuth,
+  updateProfile
 } from 'firebase/auth'
+
 
 
 const user = auth.currentUser;
@@ -53,10 +55,14 @@ export default createStore({
     },
 
     async register ({  commit  }, details){
-      const { email, password } = details
+      const { email, password, username } = details
 
       try{
-        await createUserWithEmailAndPassword(email, password)
+        console.log(username)
+        await createUserWithEmailAndPassword(auth,email, password)
+        updateProfile(auth.currentUser, {
+          displayName: username
+        })
       } catch (error) {
         switch(error.code){
           case 'auth/email-already-in-use':
@@ -74,7 +80,6 @@ export default createStore({
           default:
             alert("something went wrong you dickhead")
         }
-
         return
       }
       commit('SET_USER', auth.currentUser)
