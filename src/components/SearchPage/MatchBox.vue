@@ -49,7 +49,7 @@ const playerJoinMatch = async (matchid) => {
             <ul v-for="n in 4" :key="n.id">
                 <span :id="`player${n}`">
                     <div v-if="!item.players[n-1]"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players[n-1] }}</div>
+                    <div v-else>{{ item.players[n-1].displayName }}</div>
                 </span>
             </ul>
         </div>

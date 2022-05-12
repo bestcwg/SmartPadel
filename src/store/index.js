@@ -56,7 +56,7 @@ export default createStore({
       const { email, password } = details
 
       try{
-        await createUserWithEmailAndPassword(email, password)
+        await createUserWithEmailAndPassword(auth, email, password)
       } catch (error) {
         switch(error.code){
           case 'auth/email-already-in-use':
