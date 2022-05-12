@@ -1,5 +1,6 @@
 import { limit, deleteDoc ,addDoc, collection, getDocs, getFirestore, doc, updateDoc, getDoc, query, where } from 'firebase/firestore';
 import { db } from './firebase-config';
+import { getAuth } from "firebase/auth";
 
 export const getAllMatches = async () => {
     const results = [];
@@ -21,7 +22,7 @@ export async function getMatchByID(matchid) {
     const playersSnap = await getDocs(playersRef);
 
     playersSnap.forEach((player) => {
-        players.push(player.data().id);
+        players.push(player.data().displayName);
     })
     results.push({id:matchSnap.id, ...matchSnap.data(), players: players});
     
@@ -37,9 +38,13 @@ export async function addPlayerToMatch(playerid, matchid) {
         return false;
     }
 
+    const auth = getAuth();
+    const user = auth.currentUser;
+
     try {
         const docRef = await addDoc(playersRef, {
-          id: playerid
+            id: user.uid,
+            displayName: user.displayName
         });
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {

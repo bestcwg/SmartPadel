@@ -58,7 +58,7 @@ export default createStore({
       const { email, password, username } = details
 
       try{
-        console.log(username)
+        
         await createUserWithEmailAndPassword(auth,email, password)
         updateProfile(auth.currentUser, {
           displayName: username
