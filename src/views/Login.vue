@@ -13,6 +13,7 @@ const login = () => {
 const register = () => {
   store.dispatch('register', register_form.value);
 }
+
 </script>
 
 <template>
@@ -25,6 +26,11 @@ const register = () => {
             type="email"
             placeholder="Email adress"
             v-model="register_form.email"/>
+          <input
+            type="text"
+            placeholder="Username"
+            v-model="register_form.username"
+          />
         <input
             type="password"
             placeholder="Password"
