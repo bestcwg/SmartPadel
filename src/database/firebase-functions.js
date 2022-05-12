@@ -22,7 +22,7 @@ export async function getMatchByID(matchid) {
     const playersSnap = await getDocs(playersRef);
 
     playersSnap.forEach((player) => {
-        players.push(player.data().id);
+        players.push(player.data().displayName);
     })
     results.push({id:matchSnap.id, ...matchSnap.data(), players: players});
     
@@ -43,8 +43,8 @@ export async function addPlayerToMatch(playerid, matchid) {
 
     try {
         const docRef = await addDoc(playersRef, {
-          id: user.uid,
-          displayName: user.displayName
+            id: user.uid,
+            displayName: user.displayName
         });
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {

@@ -4,6 +4,7 @@ import { useQuery, useQueryClient, useQueries } from 'vue-query';
 import  * as database from '../../database/firebase-functions';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getIdToken } from 'firebase/auth';
+import { ref } from 'vue';
 import router from '../../router';
 
 const queryClient = useQueryClient();
@@ -36,6 +37,8 @@ const playerJoinMatch = async (matchid) => {
         alert("Match is full!");
     }
 }
+
+const name = ref(0);
 </script>
 
 <template>
@@ -49,7 +52,7 @@ const playerJoinMatch = async (matchid) => {
             <ul v-for="n in 4" :key="n.id">
                 <span :id="`player${n}`">
                     <div v-if="!item.players[n-1]"><WaitingForUserIcon /></div>
-                    <div v-else>{{ item.players[n-1].displayName }}</div>
+                    <div v-else>{{ item.players[n-1] }}</div>
                 </span>
             </ul>
         </div>
