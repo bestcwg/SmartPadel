@@ -29,7 +29,7 @@ const register = () => {
           />
         <input
             type="email"
-            placeholder="Email adress"
+            placeholder="Email"
             v-model="register_form.email"/>
         <input
             type="password"
@@ -45,7 +45,7 @@ const register = () => {
         <h2>Already have an account?</h2>
           <input
             type="email"
-            placeholder="Email adress"
+            placeholder="Email"
             v-model="login_form.email"
           />
           <input
@@ -73,13 +73,13 @@ const register = () => {
 input {
   appearance: none;
   outline: none;
-
   display: block;
   width: 95%;
   margin: 0 auto;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   padding: 0.5rem 0rem;
+  border-radius: 10px;
 }
 
 input:focus:not([type=submit]) {
@@ -87,17 +87,20 @@ input:focus:not([type=submit]) {
 }
 
 input::placeholder{
-  color: inherit;
+color: #432a30;
+font-size: 20px;
 }
 
 form.register input:not([type=submit]) {
   color: #2c3e50;
   border-bottom: 2px solid #2c3e50;
+  position: relative; top: 20px;
 }
 
 form.login input:not([type=submit]) {
   color: #2c3e50;
   border-bottom: 2px solid#2c3e50;
+  position: relative; top: 20px;
 }
 
 
@@ -109,6 +112,7 @@ form.register input[type=submit] {
   border-radius: 1rem;
   cursor: pointer;
   text-transform: uppercase;
+  position: relative; top: 20px;
 }
 
 form.login input[type=submit] {
@@ -118,7 +122,8 @@ form.login input[type=submit] {
   padding: 1rem 2rem;
   border-radius: 1rem;
   cursor: pointer;
-text-transform: uppercase;
+  text-transform: uppercase;
+  position: relative; top: 20px;
 }
 
 form.register h2{
@@ -128,6 +133,7 @@ form.register h2{
   margin-top: 5;
   text-align: center;
   font-size: 1.3em;
+  position: relative; top: 20px;
 }
 
 form.login h2{
@@ -138,6 +144,9 @@ form.login h2{
   color: #fff;
   margin-top: 3rem;
   text-align: center;
+  position: relative; top: 20px;
+  
+  
 }
 
 
