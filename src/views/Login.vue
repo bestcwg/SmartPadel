@@ -134,20 +134,31 @@ form.register h2{
   text-align: center;
   font-size: 1.3em;
   position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
-form.login h2{
 
+form.login h2{
   font-family: sans-serif;
   text-transform: uppercase;
   font-size: 1.3em;
-  color: #fff;
+  color: rgb(255, 255, 255);
   margin-top: 3rem;
   text-align: center;
   position: relative; top: 20px;
-  
-  
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
+
 
 
 
