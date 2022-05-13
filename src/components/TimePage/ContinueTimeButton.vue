@@ -1,10 +1,26 @@
+<script setup>
+import * as database from '../../database/firebase-functions'
+import router from '../../router';
+
+const matchData = {
+    cost: 150,
+    facility: "PadelPadel",
+    date: "6. September"
+}
+
+const createMatch = async () => {
+    const matchid = await database.createMatch(matchData);
+    router.push("/match/"+matchid);
+}
+</script>
+
 <template>
-    <router-link to="/searchformatch" custom v-slot="{ navigate }">
-        <button @click="navigate" class="create-match-button">
+   
+        <button @click="createMatch()" class="create-match-button">
             <p>CREATE</p>
             <img src="../../assets/images/ball.png"/>
         </button>
-    </router-link>
+    
 </template>
 
 <style scoped>

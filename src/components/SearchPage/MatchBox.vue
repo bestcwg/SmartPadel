@@ -18,19 +18,8 @@ const { data } = useQuery(
     () => database.getMatchByID(props.matchID)
 );
 
-const auth = getAuth();
-const user = auth.currentUser.uid;
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    user = user.uid;
-  } else {
-    console.log("Not logged in!");
-  }
-});
-
 const playerJoinMatch = async (matchid) => {
-    const result = await database.addPlayerToMatch(user, matchid)
+    const result = await database.addPlayerToMatch(matchid)
     if (result == true) {
         router.push("/match/" + matchid);
     } else {
@@ -38,7 +27,6 @@ const playerJoinMatch = async (matchid) => {
     }
 }
 
-const name = ref(0);
 </script>
 
 <template>

@@ -29,7 +29,7 @@ export async function getMatchByID(matchid) {
     return results;
 }
 
-export async function addPlayerToMatch(playerid, matchid) {
+export async function addPlayerToMatch(matchid) {
     const matchRef = doc(db, "Matches", matchid);
     const playersRef = collection(matchRef, "players");
 
@@ -74,14 +74,16 @@ export async function removePlayerFromMatch(playerid, matchid) {
 
 ///////////////////// TEST ////////////////////////
 
-export async function createMatchTest(matchData) {
+export async function createMatch(matchData) {
     try {
         const docRef = await addDoc(collection(db, "Matches"), {
           cost: matchData.cost,
           date: matchData.date,
           facility: matchData.facility,
         });
+        addPlayerToMatch(docRef.id);
         console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
       } catch (e) {
         console.error("Error adding document: ", e);
       }
