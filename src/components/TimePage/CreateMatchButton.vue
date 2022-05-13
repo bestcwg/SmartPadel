@@ -1,7 +1,14 @@
-<script>
-export default {
+<script setup>
+import * as database from '../../database/firebase-functions'
 
+const matchData = {
+    cost: 150,
+    facility: "PadelPadel",
+    data: "6. September"
 }
+
+const matchid = database.createMatch(matchData);
+router.push(matchid);
 </script>
 
 
