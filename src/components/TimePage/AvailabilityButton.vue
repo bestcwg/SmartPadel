@@ -1,8 +1,6 @@
 <template>
  <router-link to="/availability" custom v-slot="{ navigate }">
- <button @click="navigate" class="create-match-button">
-    <h3 class="h3">Availability</h3>
-        </button>
+    <h3 @click="navigate" class="h3">Availability</h3>
     </router-link>
 </template>
 

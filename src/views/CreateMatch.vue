@@ -28,8 +28,8 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
   padding-left: 0px;
   display: inline-block;
   vertical-align: middle;
-  bottom: 400px;
-  right: 2cm;
+  bottom: 340px;
+  right: 1.5cm;
 }
 
 

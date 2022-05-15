@@ -45,6 +45,7 @@ useQueryProvider();
 #app {
   font-weight: normal;
   background-image: url('@/assets/images/background.png');
+         background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
 
   /* iphone 13 mini height and width*/
   height: 812px;
@@ -62,9 +63,12 @@ nav {
   left: 0;
   width: 100%;
   height: 85px;
-  background-color: black;
+background: linear-gradient(180.7deg, #FFFFFF 0.61%, #8A8A8A 75.57%);
   opacity: 0.60;
 }
+
+
+
 
 nav ul {
   display: grid;

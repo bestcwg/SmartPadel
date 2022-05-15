@@ -27,7 +27,7 @@ bottom: -2cm;
 .con{
 position: relative;
 right: -1cm;
-bottom: -3cm;
+bottom: -3.6cm;
   }
 </style>
 
