@@ -61,7 +61,7 @@ nav {
   width: 100%;
   height: 70px;
 background: linear-gradient(180.7deg, #FFFFFF 0.61%, #8A8A8A 75.57%);
-  opacity: 0.60;
+  opacity: 1;
   z-index: 1;
 }
 
@@ -80,3 +80,5 @@ nav ul {
 }
 
 </style>
+
+
