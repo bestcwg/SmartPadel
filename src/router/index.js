@@ -8,6 +8,8 @@ import Date from '../views/Date.vue'
 import Time from '../views/Time.vue'
 import Availability from '../views/AvailabilityInCenter.vue'
 import Login from '../views/Login.vue'
+import LevelSettings from '../views/LevelSettings.vue'
+import LocationSettings from '../views/LocationSettings.vue'
 import { auth } from '../database/firebase-config'
 
 const routes = [
@@ -42,19 +44,19 @@ const routes = [
         meta: {
             requiresAtuh: false
         }
-        
+
     },
     {
-        path: '/date', 
-        name: 'Date', 
+        path: '/date',
+        name: 'Date',
         component: Date,
         meta: {
             requiresAtuh: true
         }
     },
     {
-        path: '/time', 
-        name: 'Time', 
+        path: '/time',
+        name: 'Time',
         component: Time,
         meta: {
             requiresAtuh: true
@@ -62,19 +64,37 @@ const routes = [
     },
 
     {
-        path: '/availability', 
-        name: 'Availability', 
+        path: '/availability',
+        name: 'Availability',
         component: Availability,
         meta: {
             requiresAtuh: true
         }
-    }, 
+    },
 
     {
-        path: '/settings', 
-        name: 'Settings', 
+        path: '/levelsettings',
+        name: 'Levelsettings',
+        component: LevelSettings,
+        meta: {
+            requiresAtuh: true
+        }
+    },
+
+    {
+        path: '/locationsettings',
+        name: 'Locationsettings',
+        component: LocationSettings,
+        meta: {
+            requiresAtuh: true
+        }
+    },
+
+    {
+        path: '/settings',
+        name: 'Settings',
         component: Settings,
-        
+
     }
 ]
 
@@ -86,6 +106,6 @@ router.beforeEach((to, from, next) => {
     if (to.name !== 'Login' && !auth.currentUser) next({ name: 'Login' })
     else next()
   })
-  
 
-export default router   
+
+export default router
