@@ -37,11 +37,11 @@ import logo from '../components/DatePage/Logo.vue'
   color: white;
   position: relative;
 right: -3.8cm;
-bottom: -2cm;
+bottom: -1cm;
 }
 .clock{
   position: relative;
-bottom: -3.5cm;
+bottom: -2.5cm;
 }
 
 .conTime{

@@ -9,7 +9,7 @@
   color: black;
   text-underline-position: below;
   position: relative;
-  bottom: -1cm;
+  bottom: -1.5cm;
   right: -3.8cm;
 font-size: small;
 text-decoration: underline;
