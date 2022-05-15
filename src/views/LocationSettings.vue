@@ -1,6 +1,7 @@
 <script setup>
 import location from "../components/LocationPage/Locations.vue"
 import back from "../components/icons/back_button.vue"
+
 </script>
 <template>
 <body class="backG">
@@ -42,7 +43,7 @@ top: -0.5cm;
 }
 .back{
   position: relative;
-  top: 4.5cm;
+  top: 6.5cm;
   right: -1cm;
 }
 

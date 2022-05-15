@@ -9,7 +9,7 @@
 <style scoped>
 .pic{
   position: relative;
-  bottom: -4cm;
+  bottom: -2cm;
 }
 
 </style>

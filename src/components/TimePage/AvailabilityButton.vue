@@ -6,7 +6,7 @@
 
 <style scoped>
 .h3{
-  color: white;
+  color: black;
   text-underline-position: below;
   position: relative;
   bottom: -1cm;

@@ -1,11 +1,13 @@
 <script setup>
 import Locations from '../components/LocationPage/Locations.vue';
 import ContinueButton from '../components/LocationPage/ContinueButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
 <body class="backG">
   <div class="createMatch">
+    <ul> <logo></logo></ul>
     <h1 class="h1">Location</h1>
     <Locations class="locations"/>
     <div>

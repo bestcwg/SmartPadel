@@ -2,11 +2,13 @@
 import Time from '../components/TimePage/TimeComponent.vue'
 import ContinueTime from '../components/TimePage/ContinueTimeButton.vue'
 import Availability from '../components/TimePage/AvailabilityButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
 <body class="backG">
   <div class="time">
+    <ul><logo></logo></ul>
     <h1 class="h1">Time</h1>
     <div class="clock">
     <Time></Time>

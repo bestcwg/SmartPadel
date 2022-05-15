@@ -1,12 +1,14 @@
 <script setup>
 import Date from '../components/DatePage/DateComponent.vue'
 import ContinueDate from '../components/DatePage/ContinueDateButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
 <body class="backG">
 
   <div class="date">
+    <ul><logo></logo></ul>
     <h1 class="h1">Date</h1>
     <Date></Date>
     <div>
