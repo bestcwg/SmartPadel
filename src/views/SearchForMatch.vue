@@ -36,18 +36,33 @@ if (user !== null) {
 </script>
 
 <template>
+<body class="backG">
   <section v-for="item in data" :key="item.id">
     <div id="search-match">
       <MatchBox :matchID="item.id"/>
     </div>
   </section>
+</body>
 </template>
 
 <style scoped>
 #search-match {
+  position: relative;
+  left: 1cm;
   display: inline-grid;
   grid-template-rows: 40px 20em 40px;
 
 }
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+
+}
+
+
 </style>
 

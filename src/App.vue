@@ -44,9 +44,6 @@ useQueryProvider();
 }
 #app {
   font-weight: normal;
-  background-image: url('@/assets/images/background.png');
-         background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
-
   /* iphone 13 mini height and width*/
   height: 812px;
   width: 375px;
@@ -62,9 +59,10 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 85px;
+  height: 70px;
 background: linear-gradient(180.7deg, #FFFFFF 0.61%, #8A8A8A 75.57%);
   opacity: 0.60;
+  z-index: 1;
 }
 
 
@@ -74,9 +72,11 @@ nav ul {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
-  margin: 6%;
-  margin-left: 55px;
+  margin: 0%;
+  margin-left: 45px;
+  margin-top: 0.6cm;
   align-items: center;
+  z-index: 1;
 }
 
 </style>

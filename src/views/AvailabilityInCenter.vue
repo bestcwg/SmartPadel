@@ -4,6 +4,8 @@ import Return from '../components/AvailabilityPage/ReturnButton.vue'
 </script>
 
 <template>
+<body class="backG">
+
 <h1 class="h1">Availability</h1>
 <div class="availability">
 <OverView></OverView>
@@ -12,9 +14,20 @@ import Return from '../components/AvailabilityPage/ReturnButton.vue'
 </ul>
 </div>
 
+</body>
 </template>
 
 <style scoped>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+
+}
 .h1{
   color: white;
   position: relative;

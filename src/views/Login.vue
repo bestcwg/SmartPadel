@@ -17,6 +17,7 @@ const register = () => {
 </script>
 
 <template>
+<body class="backG">
   <main class="Login">
     <section class="forms">
 
@@ -64,11 +65,23 @@ const register = () => {
 
     </section>
   </main>
+
+</body>
 </template>
 
 
 
 <style>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+
+}
 
 input {
   appearance: none;
@@ -138,7 +151,7 @@ form.register h2{
   position: relative; top: 20px;
    text-shadow:
        3px 3px 0 #000,
-     -1px -1px 0 #000,  
+     -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
@@ -155,14 +168,14 @@ form.login h2{
   position: relative; top: 40px;
    text-shadow:
        3px 3px 0 #000,
-     -1px -1px 0 #000,  
+     -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
 
         width: 320px;
   padding: 10px;
-   
+
 }
 
 

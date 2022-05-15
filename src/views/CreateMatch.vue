@@ -4,6 +4,7 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
 </script>
 
 <template>
+<body class="backG">
   <div class="createMatch">
     <h1 class="h1">Location</h1>
     <Locations class="locations"/>
@@ -13,9 +14,20 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
     </ul>
     </div>
   </div>
+  </body>
 </template>
 
 <style scoped>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+}
+
 .h1{
   color: white;
   position: relative;
@@ -28,7 +40,7 @@ import ContinueButton from '../components/LocationPage/ContinueButton.vue'
   padding-left: 0px;
   display: inline-block;
   vertical-align: middle;
-  bottom: 340px;
+  bottom: 275px;
   right: 1.5cm;
 }
 

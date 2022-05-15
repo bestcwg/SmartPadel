@@ -8,6 +8,9 @@ const auth = getAuth();
 </script>
 
 <template>
+<body class="backG">
+
+
 <div class="settings">
     <h1 class="header">Settings</h1>
     <choose></choose>
@@ -17,6 +20,7 @@ const auth = getAuth();
     </div>
     <div v-else></div>
 </div>
+</body>
 </template>
 
 <style scoped>
@@ -25,6 +29,16 @@ const auth = getAuth();
     position: relative;
     right: -3.5cm;
     top: 1.5cm;
+}
+
+    .backG{
+      font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 740px;
+  width: 375px;
+  position: relative;
+       background-image: url('../assets/images/settingBack.png');
+
 }
 
 </style>
