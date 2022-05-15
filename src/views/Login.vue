@@ -80,6 +80,7 @@ input {
   margin-bottom: 0.5rem;
   padding: 0.5rem 0rem;
   border-radius: 10px;
+  text-align: center;
 }
 
 input:focus:not([type=submit]) {
@@ -100,7 +101,7 @@ form.register input:not([type=submit]) {
 form.login input:not([type=submit]) {
   color: #2c3e50;
   border-bottom: 2px solid#2c3e50;
-  position: relative; top: 20px;
+  position: relative; top: 40px;
 }
 
 
@@ -123,10 +124,11 @@ form.login input[type=submit] {
   border-radius: 1rem;
   cursor: pointer;
   text-transform: uppercase;
-  position: relative; top: 20px;
+  position: relative; top: 40px;
 }
 
 form.register h2{
+  padding: 10px;
   font-family: sans-serif;
   text-transform: uppercase;
   color: #fff;
@@ -150,13 +152,17 @@ form.login h2{
   color: rgb(255, 255, 255);
   margin-top: 3rem;
   text-align: center;
-  position: relative; top: 20px;
+  position: relative; top: 40px;
    text-shadow:
        3px 3px 0 #000,
      -1px -1px 0 #000,  
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+
+        width: 320px;
+  padding: 10px;
+   
 }
 
 

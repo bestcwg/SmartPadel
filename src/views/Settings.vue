@@ -15,4 +15,6 @@ const auth = getAuth();
 </template>
 
 <style scoped>
+
+
 </style>
