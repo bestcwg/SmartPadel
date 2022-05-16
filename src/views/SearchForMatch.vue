@@ -70,7 +70,7 @@ if (user !== null) {
   height: 760px;
   width: 375px;
   position: relative;
-       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+background: linear-gradient(179.99deg, #1B8E87 0.01%, #FFFFFF 116.06%);
   overflow: scroll;
 }
 
