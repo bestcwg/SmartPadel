@@ -82,6 +82,7 @@ const playerJoinMatch = async (matchid) => {
     border-radius: 50px;
   }
 
+
 #match-players {
     position: absolute;
     left: 16.67%;
@@ -114,7 +115,7 @@ const playerJoinMatch = async (matchid) => {
 #match-information ul li {
     position: absolute;
     background: rgba(241, 242, 245, 0.46);
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 10px;
     height: 54px;
@@ -173,8 +174,8 @@ const playerJoinMatch = async (matchid) => {
     text-align: center;
 
     color: rgba(255, 255, 255, 0.91);
-    -webkit-text-stroke-width: 1.1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
 #player1 {
