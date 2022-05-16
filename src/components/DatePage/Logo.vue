@@ -1,5 +1,8 @@
 <template>
-  <img class="logo" src="../../assets/images/MiniLogo.png" alt="">
+
+  <router-link to="/">
+    <img class="logo" src="../../assets/images/MiniLogo.png" alt="">
+  </router-link>
 </template>
 
 <style scoped>
