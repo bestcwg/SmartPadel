@@ -25,10 +25,20 @@ const auth = getAuth();
 
 <style scoped>
 .header{
-    color: white;
-    position: relative;
-    right: -3.5cm;
-    top: 1.5cm;
+    padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5;
+  text-align: center;
+  font-size: 2em;
+  position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
     .backG{

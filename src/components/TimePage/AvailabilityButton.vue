@@ -6,12 +6,20 @@
 
 <style scoped>
 .h3{
-  color: black;
-  text-underline-position: below;
-  position: relative;
-  bottom: -1.5cm;
-  right: -3.8cm;
-font-size: small;
-text-decoration: underline;
+     padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+
+  text-align: center;
+  font-size: 1em;
+  position: relative; top: 40px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  cursor: pointer;
 }
 </style>

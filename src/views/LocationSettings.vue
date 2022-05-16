@@ -6,7 +6,7 @@ import back from "../components/icons/back_button.vue"
 <template>
 <body class="backG">
 <div class="locationsettings">
-  <h1 class="header">Padel centers</h1>
+  <h1 class="header"> Centers</h1>
 <location></location>
 <ul class="back">
     <back></back>
@@ -36,10 +36,20 @@ import back from "../components/icons/back_button.vue"
 }
 
 .header{
-color: white;
-position: relative;
-right: -2.5cm;
-top: -0.5cm;
+  padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5;
+  text-align: center;
+  font-size: 2em;
+  position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 .back{
   position: relative;

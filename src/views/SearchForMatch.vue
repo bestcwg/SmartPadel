@@ -37,7 +37,7 @@ if (user !== null) {
 
 <template>
 <body class="backG">
-  <h1 class="header">Matches</h1>
+  <h1 class="header">Available matches</h1>
   <section v-for="item in data" :key="item.id">
     <div id="search-match">
       <MatchBox :matchID="item.id"/>
@@ -49,10 +49,20 @@ if (user !== null) {
 <style scoped>
 
 .header{
-  color:white;
-  position: relative;
-  left: 3.5cm;
-  top: 1;
+  padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2em;
+  position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 #search-match {
@@ -71,7 +81,7 @@ if (user !== null) {
   width: 375px;
   position: relative;
        background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
-  overflow: scroll;
+  overflow: auto;
 }
 
 
