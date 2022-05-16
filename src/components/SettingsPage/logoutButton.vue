@@ -14,6 +14,7 @@ width: 150px;
 height: 49px;
 left: 107px;
 top: 604px;
+cursor: pointer;
 }
 
 .log-out-button{
