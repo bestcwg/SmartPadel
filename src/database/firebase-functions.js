@@ -42,18 +42,17 @@ export async function addPlayerToMatch(matchid) {
         return false;
     }
 
-    var leave = false;
+    var isInGameAlready = false;
 
     docSnap.forEach((player) => {
         if(player.data().id == user.uid) {
-            leave = true;
+            isInGameAlready = true;
             return;
         }
     })
 
-    if(leave == true) {
-        alert("You are already joined!");
-        return false;
+    if(isInGameAlready == true) {
+        return true;
     }
 
     try {
