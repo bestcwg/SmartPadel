@@ -5,22 +5,20 @@ import router from '../../router';
 const matchData = {
     cost: 140,
     facility: "Padel Aarhus",
-    data: "5. September"
+    date: "4. September"
 }
 
 const createMatch = async () => {
-    const matchid = await database.createMatch(matchData);
+    const matchid = await database.createMatchAndReturnID(matchData);
     router.push("/match/"+matchid);
 }
 </script>
 
 <template>
-
-        <button @click="createMatch()" class="create-match-button">
-            <p>CREATE</p>
-            <img src="../../assets/images/ball.png"/>
-        </button>
-
+    <button @click="createMatch()" class="create-match-button">
+        <p>CREATE</p>
+        <img src="../../assets/images/ball.png"/>
+    </button>
 </template>
 
 <style scoped>
