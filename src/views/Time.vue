@@ -2,10 +2,13 @@
 import Time from '../components/TimePage/TimeComponent.vue'
 import ContinueTime from '../components/TimePage/ContinueTimeButton.vue'
 import Availability from '../components/TimePage/AvailabilityButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
+<body class="backG">
   <div class="time">
+    <ul><logo></logo></ul>
     <h1 class="h1">Time</h1>
     <div class="clock">
     <Time></Time>
@@ -14,20 +17,31 @@ import Availability from '../components/TimePage/AvailabilityButton.vue'
     </ul>
     <Availability></Availability>
     </div>
-
   </div>
+  </body>
 </template>
 
 <style scoped>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+
+}
+
 .h1{
   color: white;
   position: relative;
 right: -3.8cm;
-bottom: -2cm;
+bottom: -1cm;
 }
 .clock{
   position: relative;
-bottom: -3.5cm;
+bottom: -2.5cm;
 }
 
 .conTime{

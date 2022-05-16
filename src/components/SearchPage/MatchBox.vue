@@ -35,7 +35,7 @@ const playerJoinMatch = async (matchid) => {
         <div id="match-time-playing">
             <p>{{ item.date }}</p>
         </div>
-        <div id="match-players"> 
+        <div id="match-players">
             <img src="../../assets/images/field.png">
             <ul v-for="n in 4" :key="n.id">
                 <span :id="`player${n}`">
@@ -48,7 +48,7 @@ const playerJoinMatch = async (matchid) => {
             <ul>
                 <li id="padel-facility">{{ item.facility }}</li>
                 <li id="hours-playing">test</li>
-                <li id="amount-paying">{{ item.cost }}<p>DKK</p></li>
+                <li id="amount-paying">{{ item.cost }}<p class="price">DKK</p></li>
             </ul>
         </div>
         <div id="match-join">
@@ -68,6 +68,8 @@ const playerJoinMatch = async (matchid) => {
 </template>
 
 <style scoped>
+
+
 .search-match-board {
     position: absolute;
     width: 300px;
@@ -76,7 +78,7 @@ const playerJoinMatch = async (matchid) => {
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 48px;
-    background: linear-gradient(180deg, rgba(25, 92, 192, 0.6552) 0%, rgba(0, 0, 0, 0.91) 100%);
+    background: linear-gradient(0deg, #203645 2.26%, rgba(27, 142, 135, 0) 54.1%, #203645 96.25%);
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
   }

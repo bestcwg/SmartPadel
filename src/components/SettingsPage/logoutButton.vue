@@ -1,18 +1,34 @@
 <template>
-        <button @click="$store.dispatch('logout')">
+        <button class="log-out-button" @click="$store.dispatch('logout')">
             <router-link to="/login"></router-link>
-            <p>LOGOUT</p>
-            <img src="../../assets/images/ball.png"/>
+            <p class="font">SIGN OUT</p>
         </button>
-    
+
 </template>
 
 <style scoped>
-.log-out-button {
+.log-out-button{
+
 position: absolute;
-width: 107px;
-height: 39px;
-left: 126px;
-top: 648px;
+width: 150px;
+height: 49px;
+left: 107px;
+top: 604px;
 }
+
+.log-out-button{
+position: absolute;
+width: 150px;
+height: 49px;
+left: 107px;
+top: 604px;
+
+background: #1B8E87;
+border-radius: 20px;
+}
+
+.font{
+    color: white;
+}
+
 </style>

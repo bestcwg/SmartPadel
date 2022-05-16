@@ -1,9 +1,12 @@
 <script setup>
 import OverView from '../components/AvailabilityPage/OverviewAvailability.vue'
 import Return from '../components/AvailabilityPage/ReturnButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
+<body class="backG">
+<ul><logo></logo></ul>
 <h1 class="h1">Availability</h1>
 <div class="availability">
 <OverView></OverView>
@@ -12,19 +15,32 @@ import Return from '../components/AvailabilityPage/ReturnButton.vue'
 </ul>
 </div>
 
+</body>
 </template>
 
 <style scoped>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+
+}
+
+
 .h1{
   color: white;
   position: relative;
 right: -3cm;
-bottom: -2cm;
+bottom: -1cm;
 }
 
 .return{
   position: relative;
-  bottom: -4cm;
+  bottom: -2cm;
   left: 1cm;
 }
 

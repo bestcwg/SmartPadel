@@ -1,10 +1,14 @@
 <script setup>
 import Date from '../components/DatePage/DateComponent.vue'
 import ContinueDate from '../components/DatePage/ContinueDateButton.vue'
+import logo from '../components/DatePage/Logo.vue'
 </script>
 
 <template>
+<body class="backG">
+
   <div class="date">
+    <ul><logo></logo></ul>
     <h1 class="h1">Date</h1>
     <Date></Date>
     <div>
@@ -13,10 +17,20 @@ import ContinueDate from '../components/DatePage/ContinueDateButton.vue'
     </ul>
     </div>
   </div>
+  </body>
 </template>
 
 
 <style scoped>
+
+.backG{
+        font-weight: normal;
+  /* iphone 13 mini height and width*/
+  height: 730px;
+  width: 375px;
+  position: relative;
+       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
+}
 .h1{
   color: white;
   position: relative;
@@ -27,7 +41,7 @@ bottom: -2cm;
 .con{
 position: relative;
 right: -1cm;
-bottom: -3cm;
+bottom: -3.6cm;
   }
 </style>
 
