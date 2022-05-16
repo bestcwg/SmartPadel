@@ -67,7 +67,7 @@ if (user !== null) {
 .backG{
         font-weight: normal;
   /* iphone 13 mini height and width*/
-  height: 730px;
+  height: 760px;
   width: 375px;
   position: relative;
        background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
