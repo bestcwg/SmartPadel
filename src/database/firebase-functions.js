@@ -33,13 +33,28 @@ export async function addPlayerToMatch(matchid) {
     const matchRef = doc(db, "Matches", matchid);
     const playersRef = collection(matchRef, "players");
 
+    const auth = getAuth();
+    const user = auth.currentUser;
+
     const docSnap = await getDocs(playersRef);
     if(docSnap.size >= 4) {
+        alert("Match is full!");
         return false;
     }
 
-    const auth = getAuth();
-    const user = auth.currentUser;
+    var leave = false;
+
+    docSnap.forEach((player) => {
+        if(player.data().id == user.uid) {
+            leave = true;
+            return;
+        }
+    })
+
+    if(leave == true) {
+        alert("You are already joined!");
+        return false;
+    }
 
     try {
         const docRef = await addDoc(playersRef, {
@@ -53,12 +68,14 @@ export async function addPlayerToMatch(matchid) {
     return true;
 }
 
-export async function removePlayerFromMatch(playerid, matchid) {
+export async function removePlayerFromMatch(matchid, playerid) {
     const matchRef = doc(db, "Matches", matchid);
     const playersRef = collection(matchRef, "players");
-
+    
+    const auth = getAuth();
+    const user = auth.currentUser;
     try {
-        const q = query(playersRef, where("id", "==", playerid));
+        const q = query(playersRef, where("id", "==", user.uid));
         const snap = await getDocs(q);
         const playerDocID = [];
 
@@ -70,11 +87,23 @@ export async function removePlayerFromMatch(playerid, matchid) {
     } catch (e) {
         console.error("Error deleting player doc: ", e);
     }
+
+    /*try {
+        const q = query(playersRef, where("id", "==", playerid));
+        const snap = await getDocs(q);
+        const playerDocID = [];
+
+        snap.forEach((doc) => {
+            playerDocID.push(doc.id);
+        })
+
+        await deleteDoc(doc(playersRef, playerDocID[0]));
+    } catch (e) {
+        console.error("Error deleting player doc: ", e);
+    }*/
 }
 
-///////////////////// TEST ////////////////////////
-
-export async function createMatch(matchData) {
+export async function createMatchAndReturnID(matchData) {
     try {
         const docRef = await addDoc(collection(db, "Matches"), {
           cost: matchData.cost,
@@ -89,6 +118,5 @@ export async function createMatch(matchData) {
       }
 }
 
-////////////////////////////////////////////////////////////
 
 

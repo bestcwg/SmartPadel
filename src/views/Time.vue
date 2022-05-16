@@ -1,6 +1,6 @@
 <script setup>
 import Time from '../components/TimePage/TimeComponent.vue'
-import ContinueTime from '../components/TimePage/ContinueTimeButton.vue'
+import ContinueTime from '../components/TimePage/CreateMatchButton.vue'
 import Availability from '../components/TimePage/AvailabilityButton.vue'
 import logo from '../components/DatePage/Logo.vue'
 </script>

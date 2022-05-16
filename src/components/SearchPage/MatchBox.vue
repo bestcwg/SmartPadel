@@ -21,9 +21,11 @@ const { data } = useQuery(
 const playerJoinMatch = async (matchid) => {
     const result = await database.addPlayerToMatch(matchid)
     if (result == true) {
-        router.push("/match/" + matchid);
+        router.push({
+            path: `/match/${matchid}`,
+        });
     } else {
-        alert("Match is full!");
+        return;
     }
 }
 
@@ -52,13 +54,6 @@ const playerJoinMatch = async (matchid) => {
             </ul>
         </div>
         <div id="match-join">
-            <!--
-            <router-link :to="`/match/${item.id}`" custom v-slot="{ navigate }">
-                <button @click="navigate" id="button-join-match">
-                    <p>Join Match</p>
-                </button>
-            </router-link>
-            -->
             <button @click="playerJoinMatch(item.id)" id="button-join-match">
                 <p>Join Match</p>
             </button>
@@ -68,7 +63,6 @@ const playerJoinMatch = async (matchid) => {
 </template>
 
 <style scoped>
-
 
 .search-match-board {
     position: absolute;
@@ -80,6 +74,8 @@ const playerJoinMatch = async (matchid) => {
     background: linear-gradient(0deg, #203645 2.26%, rgba(27, 142, 135, 0) 54.1%, #203645 96.25%);
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    border: none;
+    outline:none;
   }
 
 
@@ -177,6 +173,8 @@ const playerJoinMatch = async (matchid) => {
 
     background: #1B8E87;
     border-radius: 10px;
+    border: none;
+    outline:none;
 }
 
 #button-join-match p{
