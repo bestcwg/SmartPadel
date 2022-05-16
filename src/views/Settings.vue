@@ -3,6 +3,7 @@ import logoutButton from '../components/SettingsPage/logoutButton.vue'
 import choose from '../components/SettingsPage/ChoseYourLevelButton.vue'
 import location from '../components/SettingsPage/LocationButton.vue'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import logo from '../components/DatePage/Logo.vue'
 
 const auth = getAuth();
 </script>
@@ -13,6 +14,7 @@ const auth = getAuth();
 
 <div class="settings">
     <h1 class="header">Settings</h1>
+
     <choose></choose>
     <location></location>
     <div v-if="auth.currentUser">
@@ -25,10 +27,20 @@ const auth = getAuth();
 
 <style scoped>
 .header{
-    color: white;
-    position: relative;
-    right: -3.5cm;
-    top: 1.5cm;
+    padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5;
+  text-align: center;
+  font-size: 2em;
+  position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
     .backG{

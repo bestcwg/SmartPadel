@@ -7,7 +7,7 @@ import logo from '../components/DatePage/Logo.vue'
 <template>
 <body class="backG">
   <div class="createMatch">
-    <ul> <logo></logo></ul>
+    <logo></logo>
     <h1 class="h1">Location</h1>
     <Locations class="locations"/>
     <div>
@@ -31,10 +31,19 @@ import logo from '../components/DatePage/Logo.vue'
 }
 
 .h1{
-  color: white;
-  position: relative;
-  right: -3cm;
-  bottom: -2cm;
+   padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  position: relative; top: 20px;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .locations {
@@ -54,5 +63,6 @@ import logo from '../components/DatePage/Logo.vue'
   grid-auto-rows: 100px;
   grid-auto-flow: row;
   bottom: -14cm;
+  cursor: pointer;
 }
 </style>
