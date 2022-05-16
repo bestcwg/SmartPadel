@@ -9,18 +9,16 @@ const matchData = {
 }
 
 const createMatch = async () => {
-    const matchid = await database.createMatch(matchData);
+    const matchid = await database.createMatchAndReturnID(matchData);
     router.push("/match/"+matchid);
 }
 </script>
 
 <template>
-   
-        <button @click="createMatch()" class="create-match-button">
-            <p>CREATE</p>
-            <img src="../../assets/images/ball.png"/>
-        </button>
-    
+    <button @click="createMatch()" class="create-match-button">
+        <p>CREATE</p>
+        <img src="../../assets/images/ball.png"/>
+    </button>
 </template>
 
 <style scoped>

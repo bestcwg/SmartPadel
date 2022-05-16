@@ -86,6 +86,5 @@ router.beforeEach((to, from, next) => {
     if (to.name !== 'Login' && !auth.currentUser) next({ name: 'Login' })
     else next()
   })
-  
 
 export default router   

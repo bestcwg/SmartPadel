@@ -72,9 +72,7 @@ export async function removePlayerFromMatch(playerid, matchid) {
     }
 }
 
-///////////////////// TEST ////////////////////////
-
-export async function createMatch(matchData) {
+export async function createMatchAndReturnID(matchData) {
     try {
         const docRef = await addDoc(collection(db, "Matches"), {
           cost: matchData.cost,
@@ -89,6 +87,5 @@ export async function createMatch(matchData) {
       }
 }
 
-////////////////////////////////////////////////////////////
 
 
