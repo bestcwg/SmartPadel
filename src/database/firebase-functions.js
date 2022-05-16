@@ -87,19 +87,11 @@ export async function removePlayerFromMatch(matchid, playerid) {
         console.error("Error deleting player doc: ", e);
     }
 
-    /*try {
-        const q = query(playersRef, where("id", "==", playerid));
-        const snap = await getDocs(q);
-        const playerDocID = [];
-
-        snap.forEach((doc) => {
-            playerDocID.push(doc.id);
-        })
-
-        await deleteDoc(doc(playersRef, playerDocID[0]));
-    } catch (e) {
-        console.error("Error deleting player doc: ", e);
-    }*/
+    const docSnap = await getDocs(playersRef);
+    if(docSnap.size == 0) {
+        await deleteDoc(matchRef);
+    }
+    
 }
 
 export async function createMatchAndReturnID(matchData) {
