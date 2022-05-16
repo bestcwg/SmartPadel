@@ -10,6 +10,7 @@ import Availability from '../views/AvailabilityInCenter.vue'
 import Login from '../views/Login.vue'
 import LevelSettings from '../views/LevelSettings.vue'
 import LocationSettings from '../views/LocationSettings.vue'
+import Profile from '../views/Profile.vue'
 import { auth } from '../database/firebase-config'
 
 const routes = [
@@ -89,6 +90,16 @@ const routes = [
             requiresAtuh: true
         }
     },
+
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile,
+        meta: {
+            requiresAtuh: true
+        }
+    },
+
 
     {
         path: '/settings',

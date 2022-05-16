@@ -10,6 +10,7 @@
   position: relative;
   left: 0.3cm;
   top: 0.3cm;
+  z-index: 1;
 
 }
 
