@@ -52,7 +52,7 @@ if (user !== null) {
   color:white;
   position: relative;
   left: 3.5cm;
-  top: 1cm;
+  top: 1;
 }
 
 #search-match {
@@ -71,7 +71,7 @@ if (user !== null) {
   width: 375px;
   position: relative;
        background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
-
+  overflow: scroll;
 }
 
 
