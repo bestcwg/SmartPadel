@@ -1,0 +1,39 @@
+# Dockerfile for ExSys nodejs websocket example guides/src/nodejs/websocket-server.js
+
+# Henrik Korsgaard, 2022 (appropriated from Henrik Bærbak)
+
+# To build: docker build -t websocket-server -f Dockerfile.websocket (note the -f filename extension)
+# To run: docker run -d -p 8080:8080 --name websocket-server websocket-server
+# To test: open a browser on 'localhost:8080'
+# To deploy via gitlab.au.dk registry
+# docker login: login registry.gitlab.au.dk
+# docker build for target: docker build -t registry.gitlab.au.dk/henrikkorsgaard/guides/websocket-server -f Dockerfile.websocket  .
+# docker push: docker push registry.gitlab.au.dk/henrikkorsgaard/guides/websocket-server
+# docker run on VM: docker run -d -p 8080:8080 --name websocket-server registry.gitlab.au.dk/henrikkorsgaard/guides/websocket-server
+
+# Base this image on the Ubuntu 18.04 base image
+# (That is, you now have Ubuntu 18.04 as operating system)
+FROM ubuntu:20.04
+
+# We need to install libraries, so start by updating the
+# Ubuntu Linux Package library
+RUN apt update
+
+# Next install libraries IN THE IMAGE by 'apt' commands
+RUN apt install nodejs -y
+RUN apt install npm -y
+
+# own code into the image
+WORKDIR /root/padelapp
+
+# Copy the package.json file over and install the dependecies
+COPY package.json /root/padelapp/
+RUN npm install
+
+# COPY copies from 'this folder on host' to 'workdir folder in guest'
+# COPY websocket-server.js websocket-server.js
+# COPY clients /root/websocket-server/clients
+
+# Finally when the image is started (i.e. a container is created),
+# define the command to be issued. The array syntax of CMD is preferred.
+CMD ["node", "websocket-server.js"]
