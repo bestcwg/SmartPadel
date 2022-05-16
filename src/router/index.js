@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, onBeforeRouteUpdate } from 'vue-router'
 
 import Home from '../views/Home.vue'
 import Settings from '../views/Settings.vue'
@@ -10,6 +10,7 @@ import Availability from '../views/AvailabilityInCenter.vue'
 import Login from '../views/Login.vue'
 import LevelSettings from '../views/LevelSettings.vue'
 import LocationSettings from '../views/LocationSettings.vue'
+import Match from '../views/Match.vue'
 import { auth } from '../database/firebase-config'
 
 const routes = [
@@ -94,7 +95,19 @@ const routes = [
         path: '/settings',
         name: 'Settings',
         component: Settings,
+        meta: {
+            requiresAtuh: true
+        }
+    },
 
+    {
+        path: '/match/:id',
+        name: 'MatchPage',
+        component: Match,
+        props: true,
+        meta: {
+            requiresAtuh: true
+        }
     }
 ]
 

@@ -2,9 +2,9 @@
 import * as database from '../../database/firebase-functions'
 
 const matchData = {
-    cost: 150,
-    facility: "PadelPadel",
-    data: "6. September"
+    cost: 140,
+    facility: "Padel Aarhus",
+    data: "5. September"
 }
 
 const matchid = database.createMatch(matchData);
