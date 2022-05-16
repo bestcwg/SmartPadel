@@ -97,15 +97,18 @@ const playerJoinMatch = async (matchid) => {
     right: 0.33%;
     top: 2.75%;
     bottom: 89.17%;
-
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 28px;
     text-align: center;
 
-    color: #FDFDFD;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-style: bold;
+    font-weight: 700;
+
+
+    color: rgba(255, 255, 255, 0.91);
+
+
 }
 
 #match-information ul {
@@ -116,18 +119,27 @@ const playerJoinMatch = async (matchid) => {
     position: absolute;
     background: rgba(241, 242, 245, 0.46);
     border: 2px solid #FFFFFF;
+    overflow-wrap: break-word;
     box-sizing: border-box;
     border-radius: 10px;
     height: 54px;
     width: 83px;
-    font-family: 'Lato';
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     text-align: center;
+    font-weight: 700;
+    text-transform: Uppercase;
 
-    color: #F1F2F5;
+
+    color: #ffffff;
+
+
+
+
+
 }
 
 #padel-facility {
@@ -144,6 +156,7 @@ const playerJoinMatch = async (matchid) => {
     right: 36.19%;
     top: 67.69%;
     bottom: 18.72%;
+
 }
 
 #amount-paying{
@@ -160,22 +173,27 @@ const playerJoinMatch = async (matchid) => {
     right: 24.16%;
     top: 84.72%;
     bottom: 4.62%;
+    cursor: pointer;
 
-    background: #08D104;
+    background: #1B8E87;
     border-radius: 10px;
 }
 
 #button-join-match p{
-    font-family: 'Lato';
+    font-family: sans-serif;
+    text-transform: uppercase;
     font-style: bold;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
 
     color: rgba(255, 255, 255, 0.91);
-    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
+
+
+
 }
 
 #player1 {
@@ -184,6 +202,16 @@ const playerJoinMatch = async (matchid) => {
     right: 62.5%;
     top: 12%;
     bottom: 68%;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-style: bold;
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.91);
+    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
 }
 
 #player2{
@@ -193,6 +221,15 @@ const playerJoinMatch = async (matchid) => {
     top: 12%;
     bottom: 68%;
 
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-style: bold;
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.91);
+    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
 }
 
 #player3{
@@ -201,6 +238,18 @@ const playerJoinMatch = async (matchid) => {
     right: 62.5%;
     top: 64%;
     bottom: 16%;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-style: bold;
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.91);
+    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+
+
 }
 
 #player4{
@@ -209,5 +258,17 @@ const playerJoinMatch = async (matchid) => {
     right: 15%;
     top: 64%;
     bottom: 16%;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-style: bold;
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.91);
+    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
 }
+
+
 </style>

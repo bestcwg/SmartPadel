@@ -3,7 +3,9 @@ import back from "../components/icons/back_button.vue"
 import level from "../components/SettingsPage/LevelSettings/Levels.vue"
 </script>
 <template>
+
 <body class="backG">
+
 
 <div class="levelsettings">
   <level></level>

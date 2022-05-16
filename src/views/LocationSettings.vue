@@ -8,6 +8,7 @@ import back from "../components/icons/back_button.vue"
 <div class="locationsettings">
   <h1 class="header"> Centers</h1>
 <location></location>
+<ul><logo></logo></ul>
 <ul class="back">
     <back></back>
 </ul>

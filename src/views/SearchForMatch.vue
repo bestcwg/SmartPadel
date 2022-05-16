@@ -2,7 +2,7 @@
 import MatchBox from '../components/SearchPage/MatchBox.vue';
 import { useQuery, useQueryClient, useQueries } from 'vue-query';
 import  * as database from '../database/firebase-functions';
-
+import logo from '../components/DatePage/Logo.vue'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const queryClient = useQueryClient();
@@ -36,13 +36,15 @@ if (user !== null) {
 </script>
 
 <template>
+
 <body class="backG">
   <h1 class="header">Available matches</h1>
-  <section v-for="item in data" :key="item.id">
-    <div id="search-match">
-      <MatchBox :matchID="item.id"/>
-    </div>
-  </section>
+    <section v-for="item in data" :key="item.id">
+      <div id="search-match">
+        <MatchBox :matchID="item.id"/>
+      </div>
+    </section>
+
 </body>
 </template>
 

@@ -10,7 +10,7 @@ const auth = getAuth();
 
 <template>
 <body class="backG">
-
+<logo></logo>
 
 <div class="settings">
     <h1 class="header">Settings</h1>
