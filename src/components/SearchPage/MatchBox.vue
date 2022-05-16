@@ -75,13 +75,13 @@ const playerJoinMatch = async (matchid) => {
     width: 300px;
     height: 400px;
 
-    border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 48px;
     background: linear-gradient(0deg, #203645 2.26%, rgba(27, 142, 135, 0) 54.1%, #203645 96.25%);
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
   }
+
 
 #match-players {
     position: absolute;
@@ -115,7 +115,7 @@ const playerJoinMatch = async (matchid) => {
 #match-information ul li {
     position: absolute;
     background: rgba(241, 242, 245, 0.46);
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 10px;
     height: 54px;
@@ -174,8 +174,8 @@ const playerJoinMatch = async (matchid) => {
     text-align: center;
 
     color: rgba(255, 255, 255, 0.91);
-    -webkit-text-stroke-width: 1.1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
 #player1 {
