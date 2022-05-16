@@ -1,17 +1,24 @@
-<script>
-export default {
+<script setup>
+import * as database from '../../database/firebase-functions'
+import router from '../../router';
 
+const matchData = {
+    cost: 140,
+    facility: "Padel Aarhus",
+    date: "4. September"
+}
+
+const createMatch = async () => {
+    const matchid = await database.createMatchAndReturnID(matchData);
+    router.push("/match/"+matchid);
 }
 </script>
 
-
 <template>
-    <router-link to="/searchformatch" custom v-slot="{ navigate }">
-        <button @click="navigate(); addComponent()" class="create-match-button">
-            <p>CREATE</p>
-            <img src="../../assets/images/ball.png"/>
-        </button>
-    </router-link>
+    <button @click="createMatch()" class="create-match-button">
+        <p>CREATE</p>
+        <img src="../../assets/images/ball.png"/>
+    </button>
 </template>
 
 <style scoped>
@@ -21,7 +28,7 @@ export default {
         height: 64px;
         border: none;
         color: white;
-        background: #75908F;
+        background: #1B8E87;
         mix-blend-mode: normal;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 30px;

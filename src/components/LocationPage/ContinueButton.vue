@@ -10,14 +10,16 @@
 <style scoped>
     .create-match-button {
         position: relative;
+        top: 0cm;
         width: 284px;
         height: 64px;
         border: none;
         color: white;
-        background: #75908F;
+        background: #1B8E87;
         mix-blend-mode: normal;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
+        cursor: pointer;
     }
     .create-match-button p {
         position: absolute;

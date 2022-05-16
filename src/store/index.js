@@ -1,18 +1,25 @@
 import { createStore} from 'vuex'
 import router from '../router'
-import { auth } from '../firebase-config'
+import { auth } from '../database/firebase-config'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  getAuth,
+  updateProfile
 } from 'firebase/auth'
 
 
-export default createStore( {
+
+const user = auth.currentUser;
+
+
+export default createStore({
   state: {
     user: null
   },
-  muteations: {
+  mutations: {
+
     SET_USER (state, user) {
       state.user = user
     },
@@ -48,10 +55,14 @@ export default createStore( {
     },
 
     async register ({  commit  }, details){
-      const { email, password } = details
+      const { email, password, username } = details
 
       try{
-        await createUserWithEmailAndPassword(auth, email, password)
+        
+        await createUserWithEmailAndPassword(auth,email, password)
+        updateProfile(auth.currentUser, {
+          displayName: username
+        })
       } catch (error) {
         switch(error.code){
           case 'auth/email-already-in-use':
@@ -69,7 +80,6 @@ export default createStore( {
           default:
             alert("something went wrong you dickhead")
         }
-
         return
       }
       commit('SET_USER', auth.currentUser)
@@ -80,9 +90,22 @@ export default createStore( {
       await signOut(auth)
 
       commit('CLEAR_USER')
+
       router.push('/login')
+    },
+
+   fetchUser ({ commit }) {
+      auth.onAuthStateChanged(async user => {
+        if (user === null) {
+          commit('CLEAR_USER')
+        } else {
+          commit('SET_USER', user)
+
+          if (router.isReady() && router.currentRoute.value.path === '/login') {
+            router.push('/')
+          }
+        }
+      })
     }
-  },
-
-
+  }
 })
