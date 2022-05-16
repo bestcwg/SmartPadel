@@ -51,13 +51,13 @@ import logo from '../components/DatePage/Logo.vue'
 }
 .clock{
   position: relative;
-bottom: -2.5cm;
+bottom: -1cm;
 }
 
 .conTime{
   position: relative;
   right: -1cm;
-  bottom: -1cm;
+  bottom: -3cm;
 }
 
 .h3{

@@ -13,7 +13,8 @@
 
   text-align: center;
   font-size: 1em;
-  position: relative; top: 40px;
+  position: relative; top: 120px;
+  left: -0.4cm;
    text-shadow:
        3px 3px 0 #000,
      -1px -1px 0 #000,

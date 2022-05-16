@@ -71,7 +71,7 @@ const playerJoinMatch = async (matchid) => {
 
     box-sizing: border-box;
     border-radius: 48px;
-    background: linear-gradient(0deg, #203645 2.26%, rgba(27, 142, 135, 0) 54.1%, #203645 96.25%);
+background: linear-gradient(360deg, #203645 -5.5%, rgba(27, 142, 135, 0) 66.48%, #203645 111.63%);
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     border: none;

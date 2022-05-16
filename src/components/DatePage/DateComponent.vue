@@ -85,9 +85,9 @@
 <style scoped>
 .date{
           position: relative;
-          left: 0.4cm;
-          top: 3cm;
-        width: 330px;
+          left: 0cm;
+          top: 1cm;
+        width: 350px;
         height: 380px;
 }
 </style>
