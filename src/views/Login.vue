@@ -1,10 +1,19 @@
 <script setup>
 import {ref} from 'vue'
+import { Vue } from 'vue-query/node_modules/vue-demi';
 import {useStore} from 'vuex'
+import logo from '../components/DatePage/Logo.vue'
+
+
+
+
+
 
 const login_form = ref({});
 const register_form = ref({});
 const store = useStore();
+
+
 
 const login = () => {
   store.dispatch('login', login_form.value);
@@ -14,15 +23,20 @@ const register = () => {
   store.dispatch('register', register_form.value);
 }
 
+
+
+
 </script>
 
 <template>
 <body class="backG">
+
+
+  <logo></logo>
   <main class="Login">
     <section class="forms">
-
       <form class="register" @submit.prevent="register" >
-        <h2>Register new account</h2>
+      <h2>Register new account</h2>
           <input
             type="text"
             placeholder="Username"
@@ -43,7 +57,7 @@ const register = () => {
 
 
       <form class="login" @submit.prevent="login" >
-        <h2>Already have an account?</h2>
+        <h2 v-on:click="data()">Already have an account?</h2>
           <input
             type="email"
             placeholder="Email"
@@ -79,100 +93,116 @@ const register = () => {
   height: 730px;
   width: 375px;
   position: relative;
-       background: linear-gradient(180.02deg, #1B8E87 0.02%, #FFFFFF 92.97%);
-
+background: linear-gradient(179.89deg, #1B8E87 14.47%, rgba(27, 142, 135, 0) 112.53%);
 }
+
+
+
 
 input {
   appearance: none;
   outline: none;
   display: block;
-  width: 95%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  width: 75%;
+  margin: auto;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
   padding: 0.5rem 0rem;
-  border-radius: 10px;
-  text-align: center;
-}
+  background:transparent;
+  border: 0px transparent;
+  color: #fff;
+ }
+
+
 
 input:focus:not([type=submit]) {
   opacity: 1;
 }
 
 input::placeholder{
-color: #432a30;
-font-size: 20px;
+font-size: 15px;
+text-align: left;
+
 }
 
 form.register input:not([type=submit]) {
-  color: #2c3e50;
-  border-bottom: 2px solid #2c3e50;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
   position: relative; top: 20px;
+  font-style: oblique;
 }
 
+
+
 form.login input:not([type=submit]) {
-  color: #2c3e50;
-  border-bottom: 2px solid#2c3e50;
-  position: relative; top: 40px;
+  color: #ffffff;
+  border-bottom: 2px solid#ffffff;
+  position: relative;
+  top: 30px;
+    font-style: oblique;
+    position: relative;
+
 }
 
 
 form.register input[type=submit] {
-  background-color: rgba(24, 94, 88, 0.908);
+background: #75908F;
   color: #fff;
   font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: 60rem;
   cursor: pointer;
   text-transform: uppercase;
   position: relative; top: 20px;
+  width: 4cm;
 }
 
 form.login input[type=submit] {
-  background-color: rgba(20, 80, 112, 0.908);
+  background: #1B8E87;
   color: #fff;
   font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: 60rem;
   cursor: pointer;
   text-transform: uppercase;
   position: relative; top: 40px;
+   width: 3cm;
 }
+
+
+
+
+
+
+
 
 form.register h2{
   padding: 10px;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  color: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
   margin-top: 5;
   text-align: center;
   font-size: 1.3em;
   position: relative; top: 20px;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+
+
 }
 
 
 form.login h2{
-  font-family: sans-serif;
-  text-transform: uppercase;
+font-family: 'Roboto';
+font-style:normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 35px;
   font-size: 1.3em;
-  color: rgb(255, 255, 255);
-  margin-top: 3rem;
+  color: #ffffff;
+  margin-top: -1rem;
   text-align: center;
-  position: relative; top: 40px;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-
+  position: relative; top: 30px;
+  left: 0.2cm;
         width: 320px;
   padding: 10px;
 
