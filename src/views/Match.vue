@@ -45,7 +45,7 @@ const leaveMatch = async (matchid) => {
         </ul>
     </div>
     <button class="paybutton"><p>Pay here</p></button>
-    <button @click="leaveMatch(item.id)" class="button-leave">-></button>
+    <button @click="leaveMatch(item.id)" class="button-leave">Leave match</button>
     </section>
 </body>
 </template>
@@ -129,23 +129,23 @@ color: #FFFFFF;
 }
 .button-leave {
 position: absolute;
-width: 54px;
+width: 100px;
 height: 40px;
-left: 68px;
+left: 20px;
 top: 690px;
 
-font-family: 'Font Awesome 5 Free';
+font-family: 'Inter';
 font-style: normal;
-font-weight: 900;
-font-size: 30px;
-line-height: 34px;
+font-weight: 800;
+font-size: 14px;
+line-height: 17px;
 text-align: center;
-letter-spacing: 0.02em;
 
-background: #1B8E87;
+color: #FFFFFF;
+
+background: #e41c1c;
 border-radius: 20px;
 
-transform: matrix(-1, 0, 0, 1, 0, 0);
 border: none;
 outline:none;
 }
