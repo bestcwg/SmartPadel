@@ -176,37 +176,40 @@ form.login input[type=submit] {
 
 form.register h2{
   padding: 10px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  color: #ffffff;
-  margin-top: 5;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
   position: relative; top: 20px;
-
+   text-shadow:
+       
+     -1px -1px 0 rgb(0, 0, 0),
+      1px -1px 0 rgb(0, 0, 0),
+      -1px 1px 0 rgb(0, 0, 0),
+       1px 1px 0 rgb(0, 0, 0);
 
 }
 
 
 form.login h2{
-font-family: 'Roboto';
-font-style:normal;
-font-weight: 500;
-font-size: 30px;
-line-height: 35px;
-  font-size: 1.3em;
-  color: #ffffff;
-  margin-top: -1rem;
+ padding: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: rgb(52, 52, 52);
+  margin-top: 20px;
   text-align: center;
-  position: relative; top: 30px;
-  left: 0.2cm;
-        width: 320px;
-  padding: 10px;
-
+  font-size: 1.2em;
+  position: relative; top: 20px;
+   text-shadow:
+       
+     -1px -1px 0 rgb(255, 255, 255),
+      1px -1px 0 rgb(255, 255, 255),
+      -1px 1px 0 rgb(255, 255, 255),
+       1px 1px 0 rgb(255, 255, 255);
 }
+
 
 
 
